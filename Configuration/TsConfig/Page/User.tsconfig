@@ -1,0 +1,22 @@
+## User
+
+setup.override.edit_wideDocument = 1
+
+options {
+clearCache.system = 1
+pageTree.showPageIdWithTitle = 1
+}
+
+setup.default.copyLevels = 4
+options.pageTree.showPageIdWithTitle = 1
+options.pageTree.showNavTitle = 1
+options.pageTree.showDomainNameWithTitle = 1
+options.saveDocNew = 1
+options.defaultFileUploads = 10
+options.createFoldersInEB = 1
+options.uploadFieldsInTopOfEB = 1
+options.popupWindowSize = 1500x900
+TCAdefaults.pages.hidden = 0
+TCEMAIN.permissions.groupid = 1
+options.file_list.thumbnail.width = 256
+options.file_list.thumbnail.height = 256

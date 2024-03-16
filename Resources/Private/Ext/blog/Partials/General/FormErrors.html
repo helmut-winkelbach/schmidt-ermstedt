@@ -1,0 +1,17 @@
+<f:form.validationResults>
+    <f:if condition="{validationResults.flattenedErrors}">
+        <div class="errors">
+            <f:for each="{validationResults.flattenedErrors}" as="errors" key="propertyPath">
+                <div class="alert alert-danger" role="alert">
+                    <div class="alert__message">
+                        <ul class="alert__list">
+                            <f:for each="{errors}" as="error">
+                                <li><span>{error}</span></li>
+                            </f:for>
+                        </ul>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</f:form.validationResults>

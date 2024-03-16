@@ -1,0 +1,468 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: ServiceForm
+label: 'ServiceForm'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Ihre Nachricht: {subject}'
+      senderAddress: '{email}'
+      senderName: '{firstname} {lastname}'
+      attachUploads: true
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Receiver/'
+      translation:
+        language: ''
+      recipients:
+        h@winkelbach-web.de: 'Gebr. Schmidt GbR'
+      addHtmlPart: true
+      replyToRecipients:
+        aedes@schmidt-ermstedt.de: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      subject: 'Gebr. Schmidt GbR: Ihre Webseitenanfrage: {subject}'
+      senderAddress: '{email}'
+      senderName: '{subject}'
+      attachUploads: false
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
+      translation:
+        language: ''
+      recipients:
+        '{email}': '{subject}'
+      addHtmlPart: true
+    identifier: EmailToSender
+  -
+    options:
+      pageUid: '62'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        type: Fieldset
+        identifier: fieldset-communication
+        label: null
+        renderables:
+          -
+            properties:
+              options:
+                'I need an initial part': 'Ich benötige ein Ersatzteil zu folgender Maschine'
+                'Send me your brochure': 'Senden Sie mir bitte Ihre Broschüre zu folgender Maschine'
+                'I have questions about your product': 'Ich habe Fragen zu folgender Maschine'
+                'Please call me back': 'Bitte rufen Sie mich zurück'
+                'Other (please write below)': 'Anderes (bitte unten schreiben)'
+              prependOptionLabel: 'Bitte wählen Sie Ihr Thema aus'
+              fluidAdditionalAttributes:
+                required: required
+            type: SingleSelect
+            identifier: subject
+            label: Betreff
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            type: Fieldset
+            identifier: fieldset-2
+            label: Ersatzteilbestellung
+            renderables:
+              -
+                properties:
+                  text: 'Bitte fügen Sie Ihre vorhandene Information ein.'
+                defaultValue: Ersatzteilbestellung
+                type: StaticText
+                identifier: info
+                label: ''
+          -
+            type: GridRow
+            identifier: gridrow-1
+            label: Ersatzteilbestellung
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-1
+                label: 'Ersatzteil-Nr.:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Ersatzteil-Nr.:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '4'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-2
+                label: Beschreibung
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Beschreibung:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '5'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-3
+                label: Anzahl
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Anzahl:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      sm:
+                        numbersOfColumnsToUse: '3'
+          -
+            type: GridRow
+            identifier: gridrow-2
+            label: ''
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-11
+                label: 'Ersatzteil-Nr.:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Ersatzteil-Nr.:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '4'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-12
+                label: Beschreibung
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Beschreibung:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '5'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-13
+                label: Anzahl
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Anzahl:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      sm:
+                        numbersOfColumnsToUse: '3'
+          -
+            type: GridRow
+            identifier: gridrow-3
+            label: ''
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-21
+                label: 'Ersatzteil-Nr.:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Ersatzteil-Nr.:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '4'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-22
+                label: Beschreibung
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Beschreibung:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '5'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-23
+                label: Anzahl
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Anzahl:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      sm:
+                        numbersOfColumnsToUse: '3'
+          -
+            type: GridRow
+            identifier: gridrow-4
+            label: ''
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-31
+                label: 'Ersatzteil-Nr.:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Ersatzteil-Nr.:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '4'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-32
+                label: Beschreibung
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Beschreibung:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '5'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-33
+                label: Anzahl
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Anzahl:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      sm:
+                        numbersOfColumnsToUse: '3'
+          -
+            type: GridRow
+            identifier: gridrow-5
+            label: ''
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-41
+                label: 'Ersatzteil-Nr.:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Ersatzteil-Nr.:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '4'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-42
+                label: Beschreibung
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Beschreibung:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '5'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-43
+                label: Anzahl
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Anzahl:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      sm:
+                        numbersOfColumnsToUse: '3'
+          -
+            defaultValue: ''
+            type: Textarea
+            identifier: message
+            label: 'Ihre Nachricht'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            label: 'Content element'
+            properties:
+              contentElementUid: '225'
+            type: ContentElement
+            identifier: contentelement-1
+      -
+        type: Fieldset
+        identifier: fieldset-1
+        label: ''
+        renderables:
+          -
+            properties:
+              saveToFileMount: '1:/user_upload/'
+              allowedMimeTypes:
+                - image/jpeg
+                - image/png
+            type: FileUpload
+            identifier: birth-certificate
+            label: 'Bitte laden Sie Ihr Bild hoch'
+          -
+            defaultValue: ''
+            type: Hidden
+            identifier: pagetitle
+            label: Leerzeile
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: page-2
+    label: 'Ihre Kontaktdaten'
+    renderables:
+      -
+        properties:
+          text: 'Wir brauchen nur diese wenigen persönlichen Daten.'
+        type: StaticText
+        identifier: trust-us
+        label: 'Vertrauen Sie uns!'
+      -
+        type: Fieldset
+        identifier: fieldset-person
+        label: Person
+        renderables:
+          -
+            properties:
+              options:
+                Mr: Herr
+                Mrs: Fräulein
+                Ms: Frau
+              fluidAdditionalAttributes:
+                required: required
+            type: SingleSelect
+            identifier: title
+            label: Titel
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: firstname
+            label: Vorname
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: lastname
+            label: Nachname
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: company
+            label: Firma
+      -
+        type: Fieldset
+        identifier: fieldset-address
+        label: Adresse
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: address
+            label: Strasse
+          -
+            defaultValue: ''
+            type: Text
+            identifier: zip
+            label: Postleitzahl
+          -
+            defaultValue: ''
+            type: Text
+            identifier: city
+            label: Stadt
+          -
+            defaultValue: ''
+            type: Text
+            identifier: country
+            label: Land
+          -
+            type: Fieldset
+            identifier: fieldset-contact
+            label: 'Kontakt Information'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: email
+                label: 'E-Mail Adresse'
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                validators:
+                  -
+                    identifier: EmailAddress
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                type: Text
+                identifier: telephone
+                label: Telefon
+              -
+                defaultValue: ''
+                type: Text
+                identifier: fax
+                label: Fax
+              -
+                defaultValue: ''
+                type: Text
+                identifier: www
+                label: Webseite
+      -
+        type: Checkbox
+        identifier: checkbox-5
+        label: ' Zustimmung zur Datenspeicherung lt. DSGVO'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        label: 'Content element'
+        properties:
+          contentElementUid: '224'
+        type: ContentElement
+        identifier: contentelement-2
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    type: SummaryPage
+    identifier: summarypage
+    label: Zusammenfassung

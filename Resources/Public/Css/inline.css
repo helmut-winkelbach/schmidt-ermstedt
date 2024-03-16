@@ -1,0 +1,1 @@
+a[href$=".pdf"]:before{width:28px;height:30px;display:inline-block;content:' ';float:left;margin-right:.3em;vertical-align:top}

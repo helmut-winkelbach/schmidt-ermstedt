@@ -1,0 +1,217 @@
+### Setup Root Template 12 LTS Schmidt Ermstedt###
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/0010_config.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/0020_page.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/0021_page.meta.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/jumbotronbg.typoscript'
+#@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/Container.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.search.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ContentElement.typoscript'
+#@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.blog.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.forms.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.news.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.copyright.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.mainnav.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.metanav.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.rootline.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.subnavigation.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/Accordion.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/Timeline.typoscript'
+@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Helper/DynamicContent.typoscript'
+
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+
+lib.contentElement.settings.media.popup {
+   JSwindow = 0
+   directImageLink = 1
+   linkParams.ATagParams.dataWrap = class="lightbox" rel="lightbox{field:uid}"  title="{file:current:description}"   
+}
+
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:schmidt_ermstedt/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:schmidt_ermstedt/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:schmidt_ermstedt/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:schmidt_ermstedt/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 2
+                includeSpacer = 1
+                as = mainnavigation
+            }
+        }
+    }
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+        schmidt-ermstedt_layout = {$resDir}/Resources/Public/Css/mystyles.css
+    }
+
+    includeJSLibs {
+    }
+
+    includeJS {
+#	5 = {$resDir}/Resources/Public/JavaScript/jquery-3.7.1.min.js
+#	5.jsFile.async = 1
+#	5.file.defer = 1
+#	5.disableCompression = 1
+    10 = {$resDir}/Resources/Public/JavaScript/tether.min.js
+	10.jsFile.async = 1
+	10.disableCompression = 0
+	20 = {$resDir}/Resources/Public/JavaScript/bootstrap.min.js
+	20.jsFile.async = 1
+	20.disableCompression = 1
+	30 = {$resDir}/Resources/Public/JavaScript/jquery.smartmenus.min.js
+	30.jsFile.async = 1
+	30.disableCompression = 1
+	40 = {$resDir}/Resources/Public/JavaScript/custom.js
+	40.jsFile.async = 1
+#	lightbox = {$resDir}/Resources/Public/JavaScript/lightbox.min-EN.js
+#	lightbox.jsFile.async = 1
+#	lightbox.disableCompression = 1
+    }
+
+    includeJSFooterlibs {
+	5 = {$resDir}/Resources/Public/JavaScript/jquery-3.7.1.min.js
+#	5.jsFile.async = 1
+#	5.file.defer = 1
+#	5.disableCompression = 1
+  10 = {$resDir}/Resources/Public/JavaScript/tether.min.js
+#	10.jsFile.async = 1
+#	10.disableCompression = 0
+#	20 = {$resDir}/Resources/Public/JavaScript/bootstrap.min.js
+#	20.jsFile.async = 1
+#	20.disableCompression = 1
+#	30 = {$resDir}/Resources/Public/JavaScript/jquery.smartmenus.min.js
+#	30.jsFile.async = 1
+#	30.disableCompression = 1
+#	40 = {$resDir}/Resources/Public/JavaScript/custom.js
+#	40.jsFile.async = 1
+#	70 = {$resDir}/Resources/Public/JavaScript/totop.js
+#	70.jsFile.async = 1
+	lightbox = {$resDir}/Resources/Public/JavaScript/lightbox.min-EN.js
+#	lightbox.jsFile.async = 1
+	lightbox.disableCompression = 1
+}
+#    includeJSFooter {
+#        schmidt-ermstedt_scripts = EXT:schmidt-ermstedt/Resources/Public/JavaScript/Dist/scripts.js
+#    }
+}
+
+
+

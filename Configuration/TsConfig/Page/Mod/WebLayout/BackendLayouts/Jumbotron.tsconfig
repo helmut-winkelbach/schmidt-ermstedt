@@ -1,0 +1,63 @@
+# BACKENDLAYOUT: Jumbotron
+#
+mod {
+  web_layout {
+    BackendLayouts {
+      jumbotron {
+         title = LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:backend_layout.jumbotron
+         config {
+         backend_layout {
+           colCount = 3
+           rowCount = 4
+           rows {
+            1 {
+            columns {
+              1 {
+                name = Jumbotron
+                colspan = 3
+                colPos = 4
+                }
+              }
+            }
+            2 {
+            columns {
+              1 {
+                name = Main Content
+                colspan = 3
+                colPos = 0
+               }
+             }
+           }
+           3 {
+           columns {
+              1 {
+                name = Left Bottom
+                colPos = 1
+              }
+              2 {
+                name = Midle Bottom
+                colPos = 3
+              }
+              3 {
+                name = Right Bottom
+                colPos = 2
+              }
+            }
+          }
+          4 {
+            columns {
+              1 {
+                name = Content Bottom
+                colspan = 3
+                colPos = 5
+                }
+              }
+            }
+          }
+         }
+       }
+       icon = EXT:schmidt_ermstedt/Resources/Public/Icons/BackendLayouts/jumbotron.png
+       }
+     }
+  }
+}

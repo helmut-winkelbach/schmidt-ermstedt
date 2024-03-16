@@ -1,0 +1,34 @@
+{
+    "name": "winkelbach-webdesign/schmidt-ermstedt",
+    "type": "typo3-cms-extension",
+    "description": "Sitepackage",
+    "homepage": "https://www.winkelbach-web.de/sign/",
+    "license": ["GPL-2.0-or-later"],
+    "authors": [
+        {
+            "name": "Helmut Winkelbach",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "TYPO3 CMS",
+        "Sitepackage"
+    ],
+    "require": {
+        "typo3/cms-core": "^11.5 || ^12.4",
+        "typo3/cms-core": "^11.5 || ^12.4",
+        "typo3/cms-frontend": "^11.5 || ^12.4",
+        "typo3/cms-rte-ckeditor": "^11.5 || ^12.4",
+        "typo3/cms-fluid-styled-content": "^11.5 || ^12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "WinkelbachWebdesign\\SchmidtErmstedt\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "schmidt_ermstedt"
+        }
+    }
+}

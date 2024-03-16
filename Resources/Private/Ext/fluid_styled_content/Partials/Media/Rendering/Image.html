@@ -1,0 +1,41 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<picture>
+		<f:comment>
+			{dimensions.maxWidth} is calculated with a DataProcessor and should show the maximum possible image width.
+			This depends if an image is shown above a text or beside a text (half as width) and in addition how many
+			image columns are available
+		</f:comment>
+
+		<f:if condition="{dimensions.maxWidth} > 1601">
+			<source srcset="{f:uri.image(image:file, maxWidth: 2561, fileExtension: 'webp')}" media="(min-width: 1601px)" type="image/webp">
+			<source srcset="{f:uri.image(image:file, maxWidth: 2560, fileExtension: 'jpg')}" media="(min-width: 1601px)" type="image/jpeg">
+		</f:if>
+
+		<f:if condition="{dimensions.maxWidth} > 1201">
+			<source srcset="{f:uri.image(image:file, maxWidth: 1601, fileExtension: 'webp')}" media="(min-width: 1201px)" type="image/webp">
+			<source srcset="{f:uri.image(image:file, maxWidth: 1600, fileExtension: 'jpg')}" media="(min-width: 1201px)" type="image/jpeg">
+		</f:if>
+
+		<f:if condition="{dimensions.maxWidth} > 769">
+			<source srcset="{f:uri.image(image:file, maxWidth: 1201, fileExtension: 'webp')}" media="(min-width: 769px)" type="image/webp">
+			<source srcset="{f:uri.image(image:file, maxWidth: 1200, fileExtension: 'jpg')}" media="(min-width: 769px)" type="image/jpeg">
+		</f:if>
+
+		<f:if condition="{dimensions.maxWidth} > 481">
+			<source srcset="{f:uri.image(image:file, maxWidth: 769, fileExtension: 'webp')}" media="(min-width: 481px)" type="image/webp">
+			<source srcset="{f:uri.image(image:file, maxWidth: 768, fileExtension: 'jpg')}" media="(min-width: 481px)" type="image/jpeg">
+		</f:if>
+
+		<source srcset="{f:uri.image(image:file, maxWidth: 481, fileExtension: 'webp')}" type="image/webp">
+		<source srcset="{f:uri.image(image:file, maxWidth: 480, fileExtension: 'jpg')}" type="image/jpeg">
+
+		<img
+				class="image-embed-item"
+				title="{file.title}"
+				alt="{file.description -> f:format.nl2br()}"
+				src="{f:uri.image(image:file, maxWidth: 1600)}"
+				width="{dimensions.width}"
+				height="{dimensions.height}"
+				loading="{settings.media.lazyLoading}" />
+	</picture>
+</html>

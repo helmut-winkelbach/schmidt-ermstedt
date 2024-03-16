@@ -1,0 +1,70 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: emailformular-pl
+label: 'E-Mail Preisliste'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{text-2} möchte die aktuelle Preisliste erhalten'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{text-2}'
+      attachUploads: false
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/EmailPL/Receiver/'
+      translation:
+        language: default
+      recipients:
+        facebook@schmidt-ermstedt.de: 'Gebr. Schmidt GbR Ermstedt'
+      addHtmlPart: true
+    identifier: EmailToReceiver
+  -
+    options:
+      subject: 'Gebr. Schmidt GbR Ermstedt: Ich möchte die aktuelle Preisliste erhalten'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: 'Gebr. Schmidt GbR Ermstedt'
+      attachUploads: false
+      templateRootPaths:
+        30: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/EmailPL/Sender/'
+      translation:
+        language: default
+      recipients:
+        '{text-2}': ''
+      addHtmlPart: true
+    identifier: EmailToSender
+  -
+    options:
+      message: 'Ich habe diese Mail gesendet und bin mit dem Erhalt der aktuelle Preisliste einverstanden.'
+    identifier: Confirmation
+  -
+    options:
+      pageUid: '292'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Nächste Seite'
+      nextButtonLabel: Zurück
+    type: Page
+    identifier: page-1
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: 'Ihre E-Mail'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221559976
+              message: 'Bitte eine volle E-Mail Adresse angeben'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty

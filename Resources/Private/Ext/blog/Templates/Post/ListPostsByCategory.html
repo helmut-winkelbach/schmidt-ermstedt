@@ -1,0 +1,56 @@
+<f:layout name="Default" />
+<f:section name="Content">
+    <f:if condition="{category}">
+        <f:then>
+
+            <header class="blogarchiveheader blogarchiveheader--category">
+                <h2 class="blogarchiveheader__title">
+                    <span class="blogarchiveheader__titletext">
+                        <f:translate key="headline.category.simple" />:
+                        {category.title}
+                    </span>
+                    <blogvh:link.category class="blogarchiveheader__titlelink" rss="true" category="{category}">
+                        <span class="blogicon"><f:render partial="General/SocialIcons" section="Rss" optional="true" /></span>
+                    </blogvh:link.category>
+                </h2>
+                <div class="blogarchiveheader__description">
+                    <p>{category.description}</p>
+                </div>
+            </header>
+            <f:render partial="List" arguments="{_all}" />
+            <f:if condition="{settings.categoryUid} || {category.content}">
+                <footer class="blogarchivefooter blogarchivefooter--category">
+                    <f:if condition="{settings.categoryUid}">
+                        <div class="blogarchivefooter__backlink">
+                            <f:link.page pageUid="{settings.categoryUid}">
+                                <f:translate key="list.backlink.categories" />
+                            </f:link.page>
+                        </div>
+                    </f:if>
+                    <f:if condition="{category.content}">
+                        <div class="blogarchivefooter__content">
+                            <f:cObject typoscriptObjectPath="lib.blog.contentElementRendering">{category.contentElementUidList}</f:cObject>
+                        </div>
+                    </f:if>
+                </footer>
+            </f:if>
+
+        </f:then>
+        <f:else>
+
+            <header class="blogarchiveheader blogarchiveheader--categories">
+                <h2 class="blogarchiveheader__title">
+                    <span class="blogarchiveheader__titletext">
+                        <f:translate key="headline.categories" />
+                    </span>
+                </h2>
+            </header>
+            <div class="bloglist bloglist--categories">
+                <f:for each="{categories}" as="category">
+                    <f:render partial="List/Category" arguments="{_all}" />
+                </f:for>
+            </div>
+
+        </f:else>
+    </f:if>
+</f:section>

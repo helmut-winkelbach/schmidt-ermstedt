@@ -1,0 +1,38 @@
+TCEMAIN {
+   permissions.userid = 2
+   permissions.groupid = 1
+   permissions.group = show, editcontent, edit, new, delete
+   permissions {
+     user = 27
+     group = 27
+   everybody = show
+   }
+   clearCacheCmd = all
+   table.pages {
+     disablePrependAtCopy = 1
+     disableHideAtCopy = 1
+   }
+}
+
+TCEMAIN.table.tt_content {
+disablePrependAtCopy = 1
+disableHideAtCopy = 1
+} 
+
+TCEMAIN.linkHandler {
+    folder >
+    page {
+    }
+    file {
+        addParams = onclick="jumpToUrl('?act=file&linkAttributes[target]=_blank&linkAttributes[title]=Öffnet oder lädt die Datei in einem neuen Fenster&linkAttributes[class]=download&linkAttributes[params]=');return false;"
+#        addParams = onclick="jumpToUrl('?act=file&linkAttributes[target]=_blank&linkAttributes[title]=Opens or downloads file in new window&linkAttributes[class]=download&linkAttributes[params]=');return false;"
+    }
+    url {
+        addParams = onclick="jumpToUrl('?act=url&linkAttributes[target]=_blank&linkAttributes[title]=Öffnet den externen Link in einem neuen Fenster&linkAttributes[class]=externalLink&linkAttributes[params]=');return false;"
+#        addParams = onclick="jumpToUrl('?act=url&linkAttributes[target]=_blank&linkAttributes[title]=Opens external link in new window&linkAttributes[class]=externalLink&linkAttributes[params]=');return false;"
+    }
+    mail {
+        addParams = onclick="jumpToUrl('?act=mail&linkAttributes[title]=Öffnet den E-Mail-Manager zum Senden einer E-Mail&linkAttributes[class]=mail&linkAttributes[params]=');return false;"
+#        addParams = onclick="jumpToUrl('?act=mail&linkAttributes[title]=Opens email manager to send an email&linkAttributes[class]=mail&linkAttributes[params]=');return false;"
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-02-23UTC21:51:580">
+        <header>
+            <authorName>Helmut Winkelbach</authorName>
+            <authorEmail>helmut@winkelbach-web.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.1spalte">
+                <source>1Spalte</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.2spalten">
+                <source>2Spalten</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.jumbotron">
+                <source>Jumbotron</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.blog">
+                <source>Blog</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.multicolumn">
+                <source>Multicolumn</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

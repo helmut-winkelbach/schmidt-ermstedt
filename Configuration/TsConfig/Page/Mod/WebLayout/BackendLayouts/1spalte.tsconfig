@@ -1,0 +1,47 @@
+# BACKENDLAYOUT: 1Spalte
+#
+mod {
+    web_layout {
+        BackendLayouts {
+  1spalte {
+                title = LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:backend_layout.1spalte
+    config {
+      backend_layout {
+        colCount = 1
+        rowCount = 3
+        rows {
+            1 {
+             columns {
+              1 {
+                name = Jumbotron
+                colspan = 3
+                colPos = 4
+                }
+              }
+            }
+            2 {
+            columns {
+              1 {
+                name = Main Content
+                colspan = 3
+                colPos = 0
+                }
+              }
+            }
+            3 {
+            columns {
+              1 {
+                name = Content Bottom
+                colspan = 3
+                colPos = 5
+                }
+              }
+           }
+         }
+       }
+     }
+    icon = EXT:schmidt_ermstedt/Resources/Public/Icons/BackendLayouts/1spalte.png
+      }
+    }
+  }
+}
