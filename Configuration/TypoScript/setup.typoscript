@@ -1,22 +1,22 @@
 ### Setup Root Template 12 LTS Schmidt Ermstedt###
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/0010_config.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/0020_page.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/0021_page.meta.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/jumbotronbg.typoscript'
-#@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/Container.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.search.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ContentElement.typoscript'
-#@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.blog.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.forms.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/ext.news.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.copyright.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.mainnav.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.metanav.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.rootline.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/lib.subnavigation.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/Accordion.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Library/Timeline.typoscript'
-@import 'EXT:schmidt-ermstedt/Configuration/TypoScript/Helper/DynamicContent.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/0010_config.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/0020_page.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/0021_page.meta.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/jumbotronbg.typoscript'
+#@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/Container.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ext.search.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ContentElement.typoscript'
+#@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ext.blog.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ext.forms.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ext.news.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/lib.copyright.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/lib.mainnav.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/lib.metanav.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/lib.rootline.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/lib.subnavigation.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/Accordion.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/Timeline.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Helper/DynamicContent.typoscript'
 
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
 
@@ -209,7 +209,7 @@ page {
 	lightbox.disableCompression = 1
 }
 #    includeJSFooter {
-#        schmidt-ermstedt_scripts = EXT:schmidt-ermstedt/Resources/Public/JavaScript/Dist/scripts.js
+#        schmidt-ermstedt_scripts = EXT:schmidt_ermstedt/Resources/Public/JavaScript/Dist/scripts.js
 #    }
 }
 

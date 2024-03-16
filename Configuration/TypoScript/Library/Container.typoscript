@@ -3,7 +3,7 @@ tt_content {
 	two_columns {
 		templateName = TwoColumns
 		templateRootPaths {
-			10 = EXT:schmidt-ermstedt/Resources/Private/Templates/Container/
+			10 = EXT:schmidt_ermstedt/Resources/Private/Templates/Container/
 		}
 
 		dataProcessing {
@@ -24,7 +24,7 @@ tt_content {
 	three_columns {
 		templateName = ThreeColumns
 		templateRootPaths {
-			10 = EXT:schmidt-ermstedt/Resources/Private/Templates/Container/
+			10 = EXT:schmidt_ermstedt/Resources/Private/Templates/Container/
 		}
 		dataProcessing {
       10 = WinkelbachWebdesign\SchmidtErmstedt\DataProcessing\FlexFormProcessor
@@ -49,7 +49,7 @@ tt_content {
 	four_columns {
 		templateName = FourColumns
 		templateRootPaths {
-			10 = EXT:schmidt-ermstedt/Resources/Private/Templates/Container/
+			10 = EXT:schmidt_ermstedt/Resources/Private/Templates/Container/
 		}
 		dataProcessing {
       10 = WinkelbachWebdesign\SchmidtErmstedt\DataProcessing\FlexFormProcessor

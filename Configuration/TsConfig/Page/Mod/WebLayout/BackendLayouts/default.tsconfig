@@ -4,7 +4,7 @@ mod {
   web_layout {
     BackendLayouts {
       default {
-        title = LLL:EXT:schmidt-ermstedt/Resources/Private/Language/locallang_be.xlf:backend_layout.default
+        title = LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:backend_layout.default
         config {
           backend_layout {
             colCount = 3
@@ -72,7 +72,7 @@ mod {
           }
          }
         }
-        icon = EXT:schmidt-ermstedt/Resources/Public/Icons/BackendLayouts/default.png
+        icon = EXT:schmidt_ermstedt/Resources/Public/Icons/BackendLayouts/default.png
       }
     }
   }
