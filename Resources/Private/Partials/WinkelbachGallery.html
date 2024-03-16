@@ -1,0 +1,25 @@
+{namespace fl=Causal\FileList\ViewHelpers}
+
+<f:for each="{files}" as="file">
+<div class="bilder">
+    <figure>
+        <a href="{f:uri.image(image: file, maxWidth: 1600, maxHeight: 1000)}"
+			class="lightbox" rel="lightbox[{field:uid}]" 
+            title="{file.properties.description}">
+			
+            <fl:thumbnail image="{file}" width="375c" height="375c" />
+        </a>
+        <figcaption>
+            <f:if condition="{file.properties.description}">
+                <f:then>{file.properties.description}</f:then>
+                <f:else>
+                    <f:if condition="{file.properties.title}">
+                        <f:then>{file.properties.title}</f:then>
+                        <f:else>{file.name}</f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </figcaption>
+    </figure>
+</div>
+</f:for>
