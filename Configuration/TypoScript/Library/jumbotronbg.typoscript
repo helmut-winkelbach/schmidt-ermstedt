@@ -55,13 +55,13 @@ page.headerData.131313 {
   5 = TEXT
   5.value = <style>
   10 < lib.jumbotronbgXSmall
-  10.stdWrap.wrap = @media (max-width:481px){.jumbotron { background-image: url({$siteURL}|); background-size: cover;background-position: center; }}
+  10.stdWrap.wrap = @media (max-width:481px){.jumbotron { background-image: url(|); background-size: cover;background-position: center; }}
   20 < lib.jumbotronbgSmall
-  20.stdWrap.wrap = @media (min-width:482px) and (max-width:768px){.jumbotron { background-image: url({$siteURL}|); background-size: cover;background-position: center; }}
+  20.stdWrap.wrap = @media (min-width:482px) and (max-width:768px){.jumbotron { background-image: url(|); background-size: cover;background-position: center; }}
   30 < lib.jumbotronbgMedium
-  30.stdWrap.wrap = @media (min-width:769px) and (max-width:1224px){.jumbotron { background-image: url({$siteURL}|); background-size: cover;background-position: center; }}
+  30.stdWrap.wrap = @media (min-width:769px) and (max-width:1224px){.jumbotron { background-image: url(|); background-size: cover;background-position: center; }}
   40 < lib.jumbotronbg
-  40.stdWrap.wrap = @media (min-width:1225px){.jumbotron { background-image: url({$siteURL}|); background-size: cover;background-position: center; }}
+  40.stdWrap.wrap = @media (min-width:1225px){.jumbotron { background-image: url(|); background-size: cover;background-position: center; }}
   50 < temp.jumbotronbg
   50.stdWrap.wrap = @media (min-width:1620px){.jumbotron { background-image: url(|); background-size: cover;background-position: center; }}
   60 = TEXT

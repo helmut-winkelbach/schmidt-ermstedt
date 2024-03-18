@@ -12,11 +12,15 @@ call_user_func(function()
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
+        'Configuration/TsConfig/Page/All.tsconfig',
+        'Schmidt-Ermstedt'
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
     'Configuration/TsConfig/Timeline.tsconfig',
     'EXT:schmidt_ermstedt :: Timeline',
     'Configuration/TsConfig/Accordion.tsconfig',
     'EXT:schmidt_ermstedt :: Accordion'
-        'Configuration/TsConfig/Page/All.tsconfig',
-        'Schmidt-Ermstedt'
     );
 });

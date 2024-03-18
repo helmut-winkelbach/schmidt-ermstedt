@@ -1,4 +1,6 @@
 <?php
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_timeline_item');
+
 $GLOBALS['TCA']['tx_bootstrappackage_timeline_item']['ctrl']['security']['ignorePageTypeRestriction'] = true;
 
 return [

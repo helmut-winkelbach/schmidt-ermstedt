@@ -1,5 +1,7 @@
 <?php
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_accordion_item');
+
 $GLOBALS['TCA']['tx_bootstrappackage_accordion_item']['ctrl']['security']['ignorePageTypeRestriction'] = true;
 
 return [

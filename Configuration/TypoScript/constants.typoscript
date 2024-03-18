@@ -1,5 +1,6 @@
 ### Constants Root Template 12 LTS ###
-siteurl = https://www.schmidtermstedt.de/
+#siteurl = https://www.schmidtermstedt.de/
+siteurl = https://www.composer12.schmidtermstedt.de/
 siteName = Landtechnik-Werksvertretung Gebr. Schmidt GbR in Erfurt-Ermstedt
 rootId = 1
 searchId = 82
@@ -16,7 +17,6 @@ plugin.bootstrap_package_contentelements {
     }
 }
 
-############################################
 #### CTYPE: BOOTSTRAP PACKAGE ACCORDION ####
 
 tt_content.accordion >

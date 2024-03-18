@@ -1744,7 +1744,9 @@ body.page-1 h1{margin:-2px auto 0}
 body.page-4 h3 a{margin:0;font-size:1.5rem;font-weight:400}
 body.page-4 h3{margin:.3rem 0 1rem 0rem;font-size:1.4rem;font-weight:500}
 body.page-4 h4 a, body.page-75 h4 a{margin-top:0;padding:5px;font-size:1.05rem;font-weight:600}
-body.page-4 h4, body.page-75 h4{margin:0;font-size:1.1rem;font-weight:600}
+body.page-4 h4, body.page-75 h4{margin:15px 0 0;font-size:1.1rem;font-weight:600}
+
+body.page-4 .col-md-3 h4, body.page-75 .col-md-3 h4{margin:1.5rem 0 0;font-family:inherit;font-weight:500;line-height:1.2}
 
 @media screen and (max-width:1224px){
 body.page-1 h1{margin:0px auto 0}
