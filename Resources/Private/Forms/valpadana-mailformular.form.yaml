@@ -1,0 +1,207 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: mailformular
+label: Kontaktform
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Webseitenanfrage: {text-3}'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{name}'
+      attachUploads: false
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Receiver/'
+      translation:
+        language: ''
+      recipients:
+        kontakt@schmidt-ermstedt.de: 'Gebrüder Schmidt GbR Landtechnik-Werksvertretung'
+      addHtmlPart: true
+      replyToRecipients:
+        '{email}': ''
+    identifier: EmailToReceiver
+  -
+    options:
+      subject: 'Gebr. Schmidt GbR: Ihre Webseitenanfrage: {text-3}'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{name}'
+      attachUploads: false
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
+      translation:
+        language: ''
+      recipients:
+        '{email}': '{name}'
+      addHtmlPart: true
+      replyToRecipients:
+        kontakt@schmidt-ermstedt.de: ''
+    identifier: EmailToSender
+  -
+    options:
+      pageUid: '134'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      nextButtonLabel: 'Nächste Seite'
+      previousButtonLabel: Zurück
+    type: Page
+    identifier: page-1
+    label: 'Ihre Daten zur Kontaktanfrage'
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: name
+        label: Name
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: '1221560910'
+              message: 'Bitte geben Sie Ihren Namen an.'
+            -
+              code: '1221560718'
+              message: 'Bitte geben Sie Ihren Namen an.'
+            -
+              code: '1347992400'
+              message: 'Bitte geben Sie Ihren Namen an.'
+            -
+              code: '1347992453'
+              message: 'Bitte geben Sie Ihren Namen an.'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-4
+        label: Adresse
+      -
+        defaultValue: ''
+        type: Text
+        identifier: email
+        label: E-Mail
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: '1221560910'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1221560718'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1347992400'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1347992453'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1221559976'
+              message: 'Bitte geben Sie eine gültige E-Mailadresse an.'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: Thema
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: '1221560910'
+              message: 'Bitte geben Sie eine Thema ein.'
+            -
+              code: '1221560718'
+              message: 'Bitte geben Sie eine Thema ein.'
+            -
+              code: '1347992400'
+              message: 'Bitte geben Sie eine Thema ein.'
+            -
+              code: '1347992453'
+              message: 'Bitte geben Sie eine Thema ein.'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: 'Ihre Nachricht'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: '1221560910'
+              message: 'Bitte geben Sie eine Nachricht ein.'
+            -
+              code: '1221560718'
+              message: 'Bitte geben Sie eine Nachricht ein.'
+            -
+              code: '1347992400'
+              message: 'Bitte geben Sie eine Nachricht ein.'
+            -
+              code: '1347992453'
+              message: 'Bitte geben Sie eine Nachricht ein.'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          text: ''
+        type: StaticText
+        identifier: statictext-1
+        label: 'Ich möchte:'
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: ' um einen Rückruf bitten'
+      -
+        type: Checkbox
+        identifier: checkbox-2
+        label: ' ein Prospekt zum angegebenen Thema'
+      -
+        type: Checkbox
+        identifier: checkbox-3
+        label: ' ein Angebot für die beschriebene Ware'
+      -
+        properties:
+          text: 'Mit * markierte Felder müssen ausgefüllt werden'
+        type: StaticText
+        identifier: statictext-2
+        label: ''
+      -
+        type: Checkbox
+        identifier: checkbox-5
+        label: ' Zustimmung zur Datenspeicherung lt. DSGVO'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        label: 'Content element'
+        properties:
+          contentElementUid: '446'
+        type: ContentElement
+        identifier: contentelement-1
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    identifier: summarypage
+    label: Zusammenfassung
+    type: SummaryPage

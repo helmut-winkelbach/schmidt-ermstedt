@@ -1,0 +1,12 @@
+## copyright 
+lib.copyright = COA
+lib.copyright {
+  stdWrap.innerWrap = <div class="copyright">|</div>
+  10 = TEXT
+  10.value = &copy; 2016 -&nbsp;
+  11 = TEXT
+  11.data = date:U
+  11.strftime =%Y
+  12 = TEXT
+  12.value = &nbsp;<a href="javascript:window.location.href = 'mailto:' + ['kontakt','schmidt-ermstedt.de'].join('@')">Gebr. Schmidt GbR</a>
+}

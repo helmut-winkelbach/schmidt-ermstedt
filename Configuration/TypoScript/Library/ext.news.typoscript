@@ -1,0 +1,36 @@
+plugin.tx_news {
+	view.templateRootPaths >
+	view.templateRootPaths.0 = EXT:news/Resources/Private/Templates/
+	view.templateRootPaths.100 = {$resDir}/Resources/Private/Ext/News/Templates/
+	view.partialRootPaths >
+	view.partialRootPaths.0 = EXT:news/Resources/Private/Partials/
+	view.partialRootPaths.100 = {$resDir}/Resources/Private/Ext/News/Partials/
+	settings {
+        link.skipControllerAndAction = 1
+		displayDummyIfNoMedia = 1
+		listPid = 5
+		list.media.dummyImage = {$resDir}/Resources/Public/Images/schmidtermstedt.jpg
+		list.media.image.maxWidth = 320
+		list.media.image.maxHeight = 250	
+		detail.media.image.maxWidth = 320
+		detail.media.image.maxHeight = 500
+		detail.media.video.width = 330
+		detail.media.video.height = 190
+#		detail.errorHandling = redirectToPage,3,404
+	}
+	feature.requireCHashArgumentForActionArguments = 0
+}
+	
+
+##[globalVar = TSFE:id = 5]
+config.recordLinks.tx_news {
+  typolink {
+    parameter = 5
+    additionalParams.data = field:uid
+    additionalParams.wrap = &tx_news_pi1[news]=|
+    useCacheHash = 1
+  }
+  forceLink = 1
+}
+##[global]
+

@@ -1,0 +1,47 @@
+<f:layout name="Default" />
+<f:section name="Content">
+    <f:if condition="!{archiveData}">
+        <f:then>
+
+            <f:comment>If a year/+month is selected show posts matching.</f:comment>
+            <header class="blogarchiveheader blogarchiveheader--archive">
+                <h2 class="blogarchiveheader__title">
+                    <span class="blogarchiveheader__titletext">
+                        <f:if condition="{month}">{f:format.date(format: '{settings.widgets.archive.monthDateFormat}', date: timestamp)}</f:if> {year}
+                    </span>
+                    <blogvh:link.archive class="blogarchiveheader__titlelink" rss="true" year="{year}" month="{month}">
+                        <span class="blogicon"><f:render partial="General/SocialIcons" section="Rss" optional="true" /></span>
+                    </blogvh:link.archive>
+                </h2>
+            </header>
+            <f:render partial="List" arguments="{_all}" />
+            <f:if condition="{settings.authorUid}">
+                <footer class="blogarchivefooter blogarchivefooter--archive">
+                    <div class="blogarchivefooter__backlink">
+                        <f:link.page pageUid="{settings.archiveUid}">
+                            <f:translate key="list.backlink.archive" />
+                        </f:link.page>
+                    </div>
+                </footer>
+            </f:if>
+
+        </f:then>
+        <f:else>
+
+            <f:comment>If year is missing show an overview of the archive.</f:comment>
+            <header class="blogarchiveheader blogarchiveheader--archive">
+                <h2 class="blogarchiveheader__title">
+                    <span class="blogarchiveheader__titletext">
+                        <f:translate key="headline.archive"/>
+                    </span>
+                </h2>
+            </header>
+            <div class="bloglist bloglist--archive">
+                <f:for each="{archiveData}" as="months" key="year">
+                    <f:render partial="List/Archive" arguments="{_all}" />
+                </f:for>
+            </div>
+
+        </f:else>
+    </f:if>
+</f:section>

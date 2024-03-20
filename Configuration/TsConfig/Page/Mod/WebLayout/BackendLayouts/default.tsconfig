@@ -1,0 +1,79 @@
+# BACKENDLAYOUT: DEFAULT
+#
+mod {
+  web_layout {
+    BackendLayouts {
+      default {
+        title = LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:backend_layout.default
+        config {
+          backend_layout {
+            colCount = 3
+            rowCount = 5
+            rows {
+            1 {
+             columns {
+              1 {
+                name = Jumbotron
+                colspan = 3
+                colPos = 4
+               }
+             }
+            }
+            2 {
+             columns {
+                1 {
+                  name = Main Content
+                  colspan = 3
+                  colPos = 0
+                }
+              }
+            }
+           3 {
+           columns {
+              1 {
+                name = Left Center
+                colPos = 7
+              }
+              2 {
+                name = Midle Center
+                colPos = 8
+              }
+              3 {
+                name = Right Center
+                colPos = 6
+              }
+            }
+          }
+           4 {
+           columns {
+              1 {
+                name = Left Bottom
+                colPos = 1
+              }
+              2 {
+                name = Midle Bottom
+                colPos = 3
+              }
+              3 {
+                name = Right Bottom
+                colPos = 2
+              }
+            }
+          }
+          5 {
+            columns {
+              1 {
+                name = Content Bottom
+                colspan = 3
+                colPos = 5
+               }
+             }
+           }
+          }
+         }
+        }
+        icon = EXT:schmidt_ermstedt/Resources/Public/Icons/BackendLayouts/default.png
+      }
+    }
+  }
+}

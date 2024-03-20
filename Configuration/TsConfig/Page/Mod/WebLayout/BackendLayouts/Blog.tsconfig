@@ -1,0 +1,51 @@
+# BACKENDLAYOUT: Blog
+#
+mod {
+  web_layout {
+    BackendLayouts {
+      blog {
+        title = LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:backend_layout.blog
+        config {
+        backend_layout {
+          colCount = 3
+          rowCount = 3
+          rows {
+          1 {
+            columns {
+              1 {
+                name = Jumbotron
+                colspan = 3
+                colPos = 4
+              }
+            }
+          }
+          2 {
+            columns {
+              1 {
+                name = Main Content
+                colspan = 2
+                colPos = 0
+              }
+              2 {
+                name = Right
+                colPos = 2
+              }
+            }
+          }
+          3 {
+            columns {
+              1 {
+                name = Content Bottom
+                colspan = 3
+                colPos = 5
+              }
+            }
+          }
+	       }
+       }
+     }
+    icon = EXT:schmidt_ermstedt/Resources/Public/Icons/BackendLayouts/blog.png
+            }
+        }
+   }
+}

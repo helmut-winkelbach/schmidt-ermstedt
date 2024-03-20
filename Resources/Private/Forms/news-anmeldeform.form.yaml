@@ -1,0 +1,135 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: news-anmeldeformular-profi-demotage
+label: 'Anmeldeformular - Profi Demotage'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{text-2} wir kommen'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{text-2}'
+      replyToAddress: '{text-2}'
+      attachUploads: false
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Anmeldung/Receiver/'
+      translation:
+        language: default
+      recipients:
+        maeder@schmidt-ermstedt.de: 'Gebr. Schmidt GbR Ermstedt'
+      replyToRecipients:
+        '{text-2}': ''
+      addHtmlPart: true
+    identifier: EmailToReceiver
+  -
+    options:
+      subject: 'Gebr. Schmidt GbR Ermstedt: Ich komme zum Profi Demotag'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: 'Gebr. Schmidt GbR Ermstedt'
+      attachUploads: false
+      templateRootPaths:
+        30: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Anmeldung/Sender/'
+      translation:
+        language: default
+      recipients:
+        '{text-2}': ''
+      addHtmlPart: true
+      replyToRecipients:
+        '{text-2}': ''
+    identifier: EmailToSender
+  -
+    options:
+      message: 'Ich habe diese Mail gesendet und bin mit dem Erhalt weiterer Info einverstanden.'
+    identifier: Confirmation
+  -
+    options:
+      pageUid: '300'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Nächste Seite'
+      nextButtonLabel: Zurück
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        properties:
+          text: "Wir möchten entsprechend der Anmeldungen für alle Teilnehmer ausreichend Verpflegung vorbereiten und Informationsmaterial zum Mitnehmen bereitstellen.\nBitte denken Sie daran, sich rechtzeitig anzumelden, für jeden Teilnehmer bitte einzeln ausfüllen."
+        type: StaticText
+        identifier: statictext-1
+        label: ''
+      -
+        properties:
+          options:
+            'ab 9 Uhr': 'ab 9 Uhr'
+            'ab11 Uhr': 'ab11 Uhr'
+            'ab 13 Uhr': 'ab 13 Uhr'
+          elementDescription: ''
+        type: MultiCheckbox
+        identifier: multicheckbox-1
+        label: 'Ich komme:'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: 'Meine E-Mail'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: '1221560910'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1221560718'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1347992400'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1347992453'
+              message: 'Bitte geben Sie Ihre E-Mailadresse an.'
+            -
+              code: '1221559976'
+              message: 'Bitte geben Sie eine gültige E-Mailadresse an.'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: 'Firma / Name / Vorname'
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Firma / Name / Vorname'
+      -
+        type: Checkbox
+        identifier: checkbox-5
+        label: ' Zustimmung zur Datenspeicherung lt. DSGVO'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          text: ' Mit dem klick auf Absenden, gebe ich meine Zustimmung für die Verarbeitung meiner personenbezogenen Daten – gemäß der Datenschutzerklärung – zur Bearbeitung und Beantwortung dieser Anfrage. '
+        label: Zustimmung
+        type: StaticText
+        identifier: statictext-3
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    identifier: summarypage
+    label: Zusammenfassung
+    type: SummaryPage

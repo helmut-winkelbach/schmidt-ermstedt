@@ -1,0 +1,12 @@
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+	templateRootPaths = {$resDir}/Resources/Private/Templates/
+	file = {$resDir}/Resources/Private/Templates/Default.html
+    settings {
+        timeline {
+            date {
+                format = {$plugin.bootstrap_package_contentelements.timeline.date.format}
+            }
+        }
+    }
+}

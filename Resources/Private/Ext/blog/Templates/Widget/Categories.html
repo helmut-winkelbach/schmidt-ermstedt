@@ -1,0 +1,16 @@
+<f:layout name="Widget" />
+<f:section name="Title"><f:translate key="headline.categories" /></f:section>
+<f:section name="Content">
+    <ul class="blogwidgetlist blogwidgetlist--categories">
+        <f:for each="{categories}" as="category">
+        <div class="categories-widget">
+            <li id="category-{category.uid}" class="blogwidgetlist__item{f:if(condition: '{currentCategory} == {category.uid}', then: ' blogwidgetlist__item--active')}" data-blog-cateogry="{category.uid}">
+                <blogvh:link.category class="blogwidgetlist__itemlink" title="{category.title}" category="{category}">
+                    <span class="blogwidgetlist__itemtitle">{category.title}</span>
+                    <span class="blogwidgetlist__itemcount"><f:count>{category.posts}</f:count></span>
+                </blogvh:link.category>
+            </li>
+          </div>
+        </f:for>
+    </ul>
+</f:section>

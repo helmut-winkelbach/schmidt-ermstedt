@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-07-19T09:11:39Z">
+        <header/>
+        <body>
+
+            <trans-unit id="content_element.accordion">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="content_element.accordion.description">
+                <source>Insert several Accordionelement(s) with headline and text</source>
+            </trans-unit>
+
+            <trans-unit id="content_element.timeline">
+                <source>Timeline</source>
+            </trans-unit>
+            <trans-unit id="content_element.timeline.description">
+                <source>Insert a element to display a timeline</source>
+            </trans-unit>
+
+            <trans-unit id="advanced">
+                <source>Advanced</source>
+            </trans-unit>
+            <trans-unit id="settings">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="pages.nav_icon">
+                <source>Pages Nav_icon</source>
+            </trans-unit>
+            <trans-unit id="pages.thumbnail">
+                <source>Pages Thumbnail</source>
+            </trans-unit>
+            <trans-unit id="pages.nav_icon">
+                <source>Pages Nav_icon</source>
+            </trans-unit>
+            <trans-unit id="timeline.options">
+                <source>Timeline Options</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting">
+                <source>Sorting</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting.asc">
+                <source>Ascending</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting.desc">
+                <source>Descending</source>
+            </trans-unit>
+
+            <trans-unit id="accordion.options">
+                <source>Accordion Options</source>
+            </trans-unit>
+            <trans-unit id="accordion.default_element">
+                <source>Default Element</source>
+            </trans-unit>
+
+            <trans-unit id="accordion_item">
+                <source>Accordion Item</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.tt_content">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.media">
+                <source>Media</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.mediaposition">
+                <source>Media position</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.imagecols">
+                <source>Columns</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.image_zoom">
+                <source>Enlarge on Click</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.mediaorient">
+                <source>Orientation</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.mediaorient.left">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.mediaorient.top">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.mediaorient.right">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="accordion_item.mediaorient.bottom">
+                <source>Bottom</source>
+            </trans-unit>
+
+            <trans-unit id="timeline_item">
+                <source>Timeline Item</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.tt_content">
+                <source>Timeline</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.date">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.datum">
+                <source>Datum</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.icon_file">
+                <source>Icon File</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.image">
+                <source>Image</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

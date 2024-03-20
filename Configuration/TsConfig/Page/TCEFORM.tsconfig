@@ -1,0 +1,108 @@
+##Page TS
+TCEFORM.tt_content {
+   header_layout{
+    altLabels {
+#      0 = h2 - Themenueberschrift Standart
+       1 = h1 - Seitenueberschrift
+       2 = h2 - Themenueberschrift
+       3 = h3 - Ueberschrift 3.Ordnung
+       4 = h4 - Ueberschrift 4.Ordnung
+       5 = h5 - Ueberschrift 5.Ordnung
+	   }
+#    addItems.303 = Hello Header
+    removeItems = 0
+    }
+	layout.addItems {
+		4 = Mein Layout
+		5 = Responsive Video
+	  100 = Farbige Box
+    }
+    imagewidth.disabled = 1
+    imageheight.disabled = 1
+    imageorient.removeItems = 1,2,8,9,10,--div--
+    imagecols.removeItems = 5,6,7,8
+    imageborder.disabled = 1
+    section_frame.disabled = 1
+#	spaceBefore.disabled = 1
+#	spaceAfter.disabled = 1
+    header_positionsdisabled = 1 
+	date.disabled = 
+	header.label { 
+	   default = Content Block Headline 
+	   de = Block Überschrift 
+   } 
+#	space_before_class {
+#		removeItems = extra-small,extra-large
+#	}
+#	space_after_class {
+#		removeItems = extra-small,extra-large
+#	}
+}
+/*
+TCEFORM.tt_content.frame_class.addItems {
+	greybox = graue Box
+	bluebox = blaue Box
+}
+*/
+
+TCAdefaults.sys_file_reference.showinpreview = 1
+
+### Set the default image orientation (Nr. 26)
+mod.wizards.newContentElement.wizardItems.common.elements.textpic.tt_content_defValues.imageorient = 17
+
+TCEFORM.pages {
+   l18n_cfg.disabled = 1
+   layout {
+       altLabels {
+           0 = Normal
+           1 = 3 columns
+       }
+       removeItems = 2, 3
+       addItems {
+		4 = Mein Layout
+		5 = Responsive Video
+       }
+   }
+}
+
+
+TCEFORM.sys_file_reference.crop.config.cropVariants {
+	default {
+		title = Default desktop
+		selectedRatio = NaN
+		allowedAspectRatios {
+			NaN {
+				title = free
+				value = 0.0
+			}
+			1:1 {
+				title = 1:1
+				value = 1.0
+			}
+			16:9 {
+				title = 16:9
+				value = 1.777777778
+			}
+			114:50 {
+				title = 114:50
+				value = 2.28
+			}
+			3:2 {
+				title = 3:2
+				value = 1.5
+			}
+			2:3 {
+				title = 2:3
+				value = 0.6666666667
+			}
+			4:3 {
+				title = 4:3
+				value = 1.3333333333
+			}
+			3:4 {
+				title = 3:4
+				value = 0.75
+			}
+		}
+	}
+}

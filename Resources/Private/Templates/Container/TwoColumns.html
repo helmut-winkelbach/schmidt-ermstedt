@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+ 
+ <f:debug>{_all}</f:debug>
+ 
+<f:layout name="Default" />
+<f:section name="Main">
+    <f:spaceless>
+        <section class="columns-two-col-wrap columns-ctype-{data.CType} columns-bg-{data.pi_flexform.containerbg} {data.pi_flexform.containerbg}{f:if(condition: '{data.pi_flexform.defaultspace}', then: '', else: ' ptb--120')}">
+            {f:if(condition: '{data.pi_flexform.rowcolumns}', then: '<div class="container">')}
+            {f:if(condition: '{data.pi_flexform.spaceleftright}', then: '<div class="row"><div class="{data.pi_flexform.spaceleftright} mx-auto">')}
+                <div class="row{f:if(condition:'{data.pi_flexform.inner_cols}',then:' row--35')}{f:if(condition: '{data.pi_flexform.justifyontent}',then:' justify-content-between')}{f:if(condition: '{data.pi_flexform.aligncenter}',then:' align-items-center')}">
+                    <div class="col-xs-{data.pi_flexform.xs_one} col-sm-{data.pi_flexform.sm_one} {f:if(condition:'{data.pi_flexform.push_pull_cols}',then:'order-md-last')} col-md-{data.pi_flexform.md_one} col-lg-{data.pi_flexform.lg_one} col-xl-{data.pi_flexform.xl_one} {f:if(condition:'{data.pi_flexform.colsheight}',then:'matchHeight')} col-nr-1 col-first">
+                        <f:for each="{col_221}" as="record">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </f:for>
+                    </div>
+                    <!-- col-6 -->
+                    <div class="col-xs-{data.pi_flexform.xs_two} col-sm-{data.pi_flexform.sm_two} {f:if(condition:'{data.pi_flexform.push_pull_cols}',then:'order-md-first')} col-md-{data.pi_flexform.md_two} col-lg-{data.pi_flexform.lg_two} col-xl-{data.pi_flexform.xl_two} {f:if(condition:'{data.pi_flexform.colsheight}',then:'matchHeight')} col-nr-2 col-last">
+                        <f:for each="{col_222}" as="record">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </f:for>
+                    </div>
+                    <!-- col-6 -->
+                </div>
+                {f:if(condition: '{data.pi_flexform.spaceleftright}', then: '</div></div>')}
+            {f:if(condition: '{data.pi_flexform.rowcolumns}', then: '</div>')}
+        </section>
+    </f:spaceless>
+</f:section>
+</html>

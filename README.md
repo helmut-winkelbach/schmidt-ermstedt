@@ -1,2 +1,4 @@
-# schmidt-ermstedt
-Sitepackage
+Sitepackage for the project "Schmidt-Ermstedt"
+==============================================================
+
+Add some explanation here.
