@@ -1,8 +1,5 @@
 <article class="postlist__post" data-blog-tag="{f:if(condition: post.tags, then: post.tags.0.uid, else: 0)}" data-blog-category="{f:if(condition: post.categories, then: post.categories.0.uid, else: 0)}">
 
-
-
-
     <h2 class="postlist__posttitle" itemprop="name"><blogvh:link.post post="{post}" /></h2>
     <f:render partial="Meta/ListHeader" arguments="{_all}" />
     <f:if condition="{post.abstract}">
