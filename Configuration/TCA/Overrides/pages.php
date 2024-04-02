@@ -7,20 +7,20 @@ call_user_func(function()
      */
     $extensionKey = 'schmidt_ermstedt';
 
-     /**
-     * Default PageTS for WinkelbachDistribution
+    /**
+     * Default PageTS for SchmidtErmstedt
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
         'Configuration/TsConfig/Page/All.tsconfig',
-        'Winkelbach-Distribution'
+        'Schmidt-Ermstedt'
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    $extensionKey,
+        $extensionKey,
     'Configuration/TsConfig/Timeline.tsconfig',
-    'EXT:winkelbach_distribution :: Timeline',
+    'EXT:schmidt_ermstedt :: Timeline',
     'Configuration/TsConfig/Accordion.tsconfig',
-    'EXT:winkelbach_distribution :: Accordion'
+    'EXT:schmidt_ermstedt :: Accordion'
     );
 });

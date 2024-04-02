@@ -1,8 +1,9 @@
+
 renderingOptions:
   submitButtonLabel: Absenden
 type: Form
 identifier: mailformular
-label: Kontaktform
+label: 'Kontaktform Mail'
 prototypeName: standard
 finishers:
   -
@@ -14,7 +15,7 @@ finishers:
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Receiver/'
       translation:
-        language: ''
+        language: default
       recipients:
         kontakt@schmidt-ermstedt.de: 'Gebrüder Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
@@ -30,7 +31,7 @@ finishers:
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
       translation:
-        language: ''
+        language: default
       recipients:
         '{email}': '{name}'
       addHtmlPart: true

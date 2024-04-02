@@ -1,0 +1,71 @@
+# BACKENDLAYOUT: 2Spalten-rl
+#
+mod {
+  web_layout {
+    BackendLayouts {
+      2spalten-rl {
+        title = LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:backend_layout.2spalten-rl
+        config {
+          backend_layout {
+            colCount = 4
+            rowCount = 4
+            rows {
+            1 {
+             columns {
+              1 {
+                name = Jumbotron
+                colspan = 4
+                colPos = 4
+                }
+              }
+            }
+            2 {
+            columns {
+              1 {
+                name = Right
+                colPos = 6
+                }
+              2 {
+                name = Main Content
+                colspan = 3
+                colPos = 0
+              }
+              }
+             }
+            3 {
+             columns {
+               1 {
+                 name = Left Bottom
+                 colPos = 1
+               }
+               2 {
+                 name = Midle Bottom
+                 colPos = 3
+               }
+               3 {
+                 name = Midle2 Bottom
+                 colPos = 2
+               }
+               4 {
+                 name = Right Bottom
+                 colPos = 5
+                 }
+               }
+             }
+            4 {
+             columns {
+               1 {
+                name = Content Bottom
+                colspan = 4
+                 colPos = 7
+                }
+              }
+            }
+         }
+       }
+     }
+    icon = EXT:schmidt_ermstedt/Resources/Public/Icons/BackendLayouts/2spalten-rl.png
+            }
+        }
+   }
+}

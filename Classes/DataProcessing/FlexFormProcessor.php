@@ -13,7 +13,7 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  * Advanced TypoScript configuration
  * Process field assigned in fieldName and stores processed data to new key
  *
- * 10 = WinkelbachWebdesign\schmidt_ermstedt\DataProcessing\FlexFormProcessor
+ * 10 = WinkelbachWebdesign\winkelbach_distribution\DataProcessing\FlexFormProcessor
  * 10 {
  *   fieldName = pi_flexform
  *   as = flexform
