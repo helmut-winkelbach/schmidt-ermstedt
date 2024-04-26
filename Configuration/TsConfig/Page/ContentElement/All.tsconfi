@@ -1,5 +1,0 @@
-##########################
-#### CONTENT ELEMENTS ####
-##########################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/ContentElement/Categories.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/ContentElement/Element" extensions="tsconfig">
