@@ -1,0 +1,223 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+identifier: AnmeldeformularGeraeteeinsendung
+label: Anmeldeformular Geräteeinsendung
+type: Form
+prototypeName: complaintForm
+finishers:
+  -
+    options:
+      subject: 'Anmeldeformular zur Geräteeinsendung'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{name}'
+      attachUploads: true
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/AnmeldeformularGeraeteeinsendung/Receiver/'
+      translation:
+        language: default
+      recipients:
+        facebook@schmidt-ermstedt.de: 'Gebrüder Schmidt GbR Landtechnik-Werksvertretung'
+      addHtmlPart: true
+      replyToRecipients:
+        '{email}': ''
+    identifier: EmailToReceiver
+  -
+    options:
+      subject: 'Ihr Anmeldeformular zur Geräteeinsendung'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{name}'
+      attachUploads: false
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/AnmeldeformularGeraeteeinsendung/Sender/'
+      translation:
+        language: default
+      recipients:
+        '{email}': '{name}'
+      addHtmlPart: true
+      replyToRecipients:
+        facebook@schmidt-ermstedt.de: ''
+    identifier: EmailToSender
+  -
+    options:
+      pageUid: '62'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    identifier: page-1
+    label: 'Anmeldeformular für die Einsendung von Geräten'
+    type: Page
+    renderables:
+      -
+        defaultValue: ''
+        identifier: name
+        label: 'Name / Firmenname'
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: 'Straße und Nr.'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: 'Land, PLZ, Ort'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: 'Ansprechpartner für technische Rückfragen'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: email
+        label: E-Mail
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: EmailAddress
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-4
+        label: 'Direkte Rückrufnummer'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-5
+        label: Geräteart
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-6
+        label: Hersteller
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-7
+        label: Typenbezeichnung
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-8
+        label: Seriennummer
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: 'Wartung nach Herstellervorschrift ohne bekannte Schäden'
+      -
+        type: Checkbox
+        identifier: checkbox-2
+        label: Reparatur
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-9
+        label: 'Beauftragte Reparaturleistung'
+      -
+        type: Checkbox
+        identifier: checkbox-3
+        label: Garantieantrag
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: 'Beschreibung des Mangels'
+      -
+        type: Checkbox
+        identifier: checkbox-4
+        label: 'Abweichend von Rechnungsanschrift - Ablieferanschrift für Paketdienst bei Rücksendung'
+      -
+        defaultValue: 'Ablieferanschrift für Paketdienst bei Rücksendung, wenn abweichend von Rechnungsanschrift'
+        type: Hidden
+        identifier: hidden-1
+        label: 'Ablieferanschrift für Paketdienst bei Rücksendung, wenn abweichend von Rechnungsanschrift'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-10
+        label: 'erreichbar / anzutreffen z.B. Montag - Freitag von - bis'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-11
+        label: 'Name / Firmenname'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-12
+        label: 'Straße und Nr'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-13
+        label: 'Land, PLZ, Ort'
+      -
+        properties:
+          text: ''
+        type: StaticText
+        identifier: statictext-2
+        label: 'Jedem Gerät ist ein eigener Versandschein beizulegen.'
+      -
+        properties:
+          text: ''
+        type: StaticText
+        identifier: statictext-3
+        label: 'Bitte senden Sie das ausgefüllte Anmeldeformular vor dem Versand der Geräte ein.'
+      -
+        type: Checkbox
+        identifier: checkbox-5
+        label: ' Zustimmung zur Datenspeicherung lt. DSGVO'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        label: 'Content element'
+        properties:
+          contentElementUid: '224'
+        type: ContentElement
+        identifier: contentelement-1
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    identifier: summarypage
+    label: Zusammenfassung
+    type: SummaryPage

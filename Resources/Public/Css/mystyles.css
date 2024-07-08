@@ -1899,7 +1899,7 @@ body.page-75 .ce-uploads span{display:inline-block}
 }
 .blogimage img{display:block;margin:auto}
 
-body.page-1 .teaser-text li{list-style-type: none;position: relative;line-height:2}
+body.page-1 .teaser-text li{list-style-type: none;position: relative;line-height:1.4}
 /*
 body.page-1 .teaser-text li::before {
     content: '■';
@@ -1920,3 +1920,8 @@ figure /*.blogimage .blogimage--featured*/{margin:0}
 .postteaser__posttitle {margin:0 0 30px!important}
 
 .hh-slider figure figcaption {left:0px;margin:right:20px;position: relative;top:10%}
+
+body.page-40 h1{margin:0;font-size: 140%;padding:0}
+
+body.page-1 #c5{font-size:14px} 
+body.page-1 h4{margin:0;font-size: 140%;padding:0} 

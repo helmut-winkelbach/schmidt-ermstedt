@@ -87,73 +87,6 @@ page {
             }
         }
     }
-/*
-    meta {
-        viewport = {$page.meta.viewport}
-        robots = {$page.meta.robots}
-        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
-        description = {$page.meta.description}
-        description {
-            override.field = description
-        }
-        author = {$page.meta.author}
-        author {
-            override.field = author
-        }
-        keywords = {$page.meta.keywords}
-        keywords {
-            override.field = keywords
-        }
-        X-UA-Compatible = {$page.meta.compatible}
-        X-UA-Compatible {
-            attribute = http-equiv
-        }
-
-        # OpenGraph Tags
-        og:title {
-            attribute = property
-            field = title
-        }
-        og:site_name {
-            attribute = property
-            data = TSFE:tmpl|setup|sitetitle
-        }
-        og:description = {$page.meta.description}
-        og:description {
-            attribute = property
-            field = description
-        }
-        og:image {
-            attribute = property
-            stdWrap.cObject = FILES
-            stdWrap.cObject {
-                references {
-                    data = levelfield:-1, media, slide
-                }
-                maxItems = 1
-                renderObj = COA
-                renderObj {
-                    10 = IMG_RESOURCE
-                    10 {
-                        file {
-                            import.data = file:current:uid
-                            treatIdAsReference = 1
-                            width = 1280c
-                            height = 720c
-                        }
-                        stdWrap {
-                            typolink {
-                                parameter.data = TSFE:lastImgResourceInfo|3
-                                returnLast = url
-                                forceAbsoluteUrl = 1
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-*/
     includeCSSLibs {
 
     }
@@ -166,53 +99,26 @@ page {
     }
 
     includeJS {
-#	5 = {$resDir}/Resources/Public/JavaScript/jquery-3.7.1.min.js
-#	5.jsFile.async = 1
-#	5.file.defer = 1
-#	5.disableCompression = 1
-    10 = {$resDir}/Resources/Public/JavaScript/tether.min.js
-	10.jsFile.async = 1
-	10.disableCompression = 0
-	20 = {$resDir}/Resources/Public/JavaScript/bootstrap.min.js
-	20.jsFile.async = 1
-	20.disableCompression = 1
-	30 = {$resDir}/Resources/Public/JavaScript/jquery.smartmenus.min.js
-	30.jsFile.async = 1
-	30.disableCompression = 1
-	40 = {$resDir}/Resources/Public/JavaScript/custom.js
-	40.jsFile.async = 1
-#	lightbox = {$resDir}/Resources/Public/JavaScript/lightbox.min-EN.js
-#	lightbox.jsFile.async = 1
-#	lightbox.disableCompression = 1
-    }
+  }
 
     includeJSFooterlibs {
 	5 = {$resDir}/Resources/Public/JavaScript/jquery-3.7.1.min.js
-#	5.jsFile.async = 1
-#	5.file.defer = 1
-#	5.disableCompression = 1
   10 = {$resDir}/Resources/Public/JavaScript/tether.min.js
-#	10.jsFile.async = 1
-#	10.disableCompression = 0
-#	20 = {$resDir}/Resources/Public/JavaScript/bootstrap.min.js
-#	20.jsFile.async = 1
-#	20.disableCompression = 1
-#	30 = {$resDir}/Resources/Public/JavaScript/jquery.smartmenus.min.js
-#	30.jsFile.async = 1
-#	30.disableCompression = 1
-#	40 = {$resDir}/Resources/Public/JavaScript/custom.js
-#	40.jsFile.async = 1
-#	70 = {$resDir}/Resources/Public/JavaScript/totop.js
-#	70.jsFile.async = 1
+	10bm_image_gallery.async = 1
+	10.disableCompression = 0
+	20 = {$resDir}/Resources/Public/JavaScript/bootstrap.min.js
+	20.async = 1
+	20.disableCompression = 1
+	30 = {$resDir}/Resources/Public/JavaScript/jquery.smartmenus.min.js
+	30.async = 1
+	30.disableCompression = 1
+	40 = {$resDir}/Resources/Public/JavaScript/custom.js
+	40.async = 1
   media2click = {$resDir}/Resources/Public/JavaScript/media2click.js
   media2click.forceOnTop = 1
 	lightbox = {$resDir}/Resources/Public/JavaScript/lightbox.min-EN.js
-#	lightbox.jsFile.async = 1
 	lightbox.disableCompression = 1
-}
-#    includeJSFooter {
-#        schmidt-ermstedt_scripts = EXT:schmidt_ermstedt/Resources/Public/JavaScript/Dist/scripts.js
-#    }
+  }
 }
 
 
