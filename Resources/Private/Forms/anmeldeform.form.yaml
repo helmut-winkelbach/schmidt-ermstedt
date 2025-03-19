@@ -18,18 +18,16 @@ finishers:
       translation:
         language: ''
       recipients:
-        maeder@schmidt-ermstedt.de: 'Gebr. Schmidt GbR Ermstedt'
+        facebook@schmidt-ermstedt.de: 'maeder Heiko und Mario Schmidt GbR Ermstedt'
       replyToRecipients:
         '{text-2}': ''
       addHtmlPart: true
-      blindCarbonCopyRecipients:
-        h@winkelbach-web.de: ''
-    identifier: EmailToReceiver
+      identifier: EmailToReceiver
   -
     options:
-      subject: 'Gebr. Schmidt GbR Ermstedt: Ich komme zum Profi Demotag'
+      subject: 'Heiko und Mario Schmidt GbR Ermstedt: Ich komme zum Profi Demotag'
       senderAddress: anfrage@schmidtermstedt.de
-      senderName: 'Gebr. Schmidt GbR Ermstedt'
+      senderName: 'Heiko und Mario Schmidt GbR Ermstedt'
       attachUploads: false
       templateRootPaths:
         20: 'EXT:winkelbach_distribution/Resources/Private/Frontend/Templates/Finishers/Anmeldung/Sender/'
@@ -40,8 +38,6 @@ finishers:
       addHtmlPart: true
       replyToRecipients:
         '{text-2}': ''
-      blindCarbonCopyRecipients:
-        h@winkelbach-web.de: ''
     identifier: EmailToSender
   -
     options:

@@ -16,14 +16,14 @@ finishers:
       translation:
         language: default
       recipients:
-        facebook@schmidt-ermstedt.de: 'Gebr. Schmidt GbR Ermstedt'
+        facebook@schmidt-ermstedt.de: 'kontakt Heiko und Mario Schmidt GbR Ermstedt'
       addHtmlPart: true
     identifier: EmailToReceiver
   -
     options:
-      subject: 'Gebr. Schmidt GbR Ermstedt: Ich möchte die aktuelle Messe Info erhalten'
+      subject: 'Heiko und Mario Schmidt GbR Ermstedt: Ich möchte die aktuelle Messe Info erhalten'
       senderAddress: anfrage@schmidtermstedt.de
-      senderName: 'Gebr. Schmidt GbR Ermstedt'
+      senderName: 'Heiko und Mario Schmidt GbR Ermstedt'
       attachUploads: false
       templateRootPaths:
         30: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/EmailMesse/Sender/'

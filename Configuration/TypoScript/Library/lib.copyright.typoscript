@@ -8,5 +8,5 @@ lib.copyright {
   11.data = date:U
   11.strftime =%Y
   12 = TEXT
-  12.value = &nbsp;<a href="javascript:window.location.href = 'mailto:' + ['kontakt','schmidt-ermstedt.de'].join('@')">Gebr. Schmidt GbR</a>
+  12.value = &nbsp;<a href="javascript:window.location.href = 'mailto:' + ['kontakt','schmidt-ermstedt.de'].join('@')">Heiko und Mario Schmidt GbR</a>
 }

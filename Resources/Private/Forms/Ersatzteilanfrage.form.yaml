@@ -1,0 +1,453 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: ExtendedContactFormExample
+label: Ersatzteilanfrage
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Ersatzteilanfrage: {subject}'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{firstname} {lastname}'
+      attachUploads: true
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Receiver/'
+      translation:
+        language: ''
+      recipients:
+        facebook@schmidt-ermstedt.de: 'lager Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+      addHtmlPart: true
+      replyToRecipients:
+        '{email}': ''
+    identifier: EmailToReceiver
+  -
+    options:
+      subject: 'Heiko und Mario Schmidt GbR: Ihre Ersatzteilanfrage: {subject}'
+      senderAddress: anfrage@schmidtermstedt.de
+      senderName: '{subject}'
+      attachUploads: true
+      templateRootPaths:
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
+      translation:
+        language: ''
+      recipients:
+        '{email}': '{subject}'
+      addHtmlPart: true
+      replyToRecipients:
+        facebook@schmidt-ermstedt.de: 'lager Heiko und Mario Schmidt GbR'
+    identifier: EmailToSender
+  -
+    options:
+      pageUid: '62'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        type: Fieldset
+        identifier: fieldset-communication
+        label: null
+        renderables:
+          -
+            properties:
+              options:
+                'Ich benötige Ersatzteile': '- Ich benötige Ersatzteilunterlagen zu folgender Maschine'
+                'Bitte senden Sie mir Preise': '- Bitte senden Sie mir meine Einkaufspreise für folgende Ersatzteile'
+                'Ich habe eine Frage': '- Ich habe Fragen zu folgender Maschine, Bitte rufen Sie mich zurück'
+                Anderes: '- Anderes (bitte unten schreiben)'
+              prependOptionLabel: 'Bitte wählen Sie Ihr Thema aus'
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Bitte wählen Sie ein Thema aus'
+                -
+                  code: 1221560718
+                  message: 'Bitte wählen Sie ein Thema aus'
+                -
+                  code: 1347992400
+                  message: 'Bitte wählen Sie ein Thema aus'
+                -
+                  code: 1347992453
+                  message: 'Bitte wählen Sie ein Thema aus'
+            type: SingleSelect
+            identifier: subject
+            label: Betreff
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-4
+            label: 'Maschinenart:'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Bitte dieses Feld ausfüllen'
+                -
+                  code: 1221560718
+                  message: 'Bitte dieses Feld ausfüllen'
+                -
+                  code: 1347992400
+                  message: 'Bitte dieses Feld ausfüllen'
+                -
+                  code: 1347992453
+                  message: 'Bitte dieses Feld ausfüllen'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-5
+            label: 'Marke oder Hersteller:'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Bitte dieses Feld ausfüllen'
+                -
+                  code: 1221560718
+                  message: 'Bitte dieses Feld ausfüllen'
+                -
+                  code: 1347992400
+                  message: 'Bitte dieses Feld ausfüllen'
+                -
+                  code: 1347992453
+                  message: 'Bitte dieses Feld ausfüllen'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-6
+            label: 'Baujahr oder geschätztes Alter:'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-7
+            label: 'Modell:'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-8
+            label: 'Typ:'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-9
+            label: 'Ident-, Fahrgestell- oder Seriennummer:'
+          -
+            properties:
+              saveToFileMount: '1:/user_upload/'
+              allowedMimeTypes:
+                - image/jpeg
+                - image/png
+                - image/pdf
+            type: FileUpload
+            identifier: bild
+            label: 'Hier können Sie Bilder vom Typschild, der Maschine und schadhafter Teile hochladen:'
+          -
+            properties:
+              saveToFileMount: '1:/user_upload/'
+            formEditor:
+              predefinedDefaults:
+                properties:
+                  saveToFileMount: '1:/user_upload/'
+              allowedMimeTypes:
+                - image/jpeg
+                - image/png
+                - image/pdf
+            type: FileUpload
+            identifier: bild2
+            label: 'Hier können Sie ein weiteres Bild hochladen:'
+          -
+            properties:
+              saveToFileMount: '1:/user_upload/'
+            formEditor:
+              predefinedDefaults:
+                properties:
+                  saveToFileMount: '1:/user_upload/'
+              allowedMimeTypes:
+                - image/jpeg
+                - image/png
+                - image/pdf
+            type: FileUpload
+            identifier: bild3
+            label: 'Hier können Sie ein weiteres Bild hochladen:'
+          -
+            defaultValue: ''
+            type: Textarea
+            identifier: message
+            label: 'Ihre Nachricht:'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Bitte diese Feld ausfüllen'
+                -
+                  code: 1221560718
+                  message: 'Bitte diese Feld ausfüllen'
+                -
+                  code: 1347992400
+                  message: 'Bitte diese Feld ausfüllen'
+                -
+                  code: 1347992453
+                  message: 'Bitte diese Feld ausfüllen'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            type: Fieldset
+            identifier: fieldset-2
+            label: null
+            renderables:
+              -
+                properties:
+                  text: 'Bitte fügen Sie Ihre vorhandene Information ein.'
+                defaultValue: Ersatzteilanfrage
+                type: StaticText
+                identifier: info
+                label: ''
+      -
+        properties:
+          minimumCopies: 0
+          maximumCopies: 10
+          showRemoveButton: true
+          copyButtonLabel: 'Ein weiteres Ersatzteil anfragen'
+          removeButtonLabel: 'Dieses Ersatzteil entfernen'
+        type: RepeatableContainer
+        identifier: repeatablecontainer-1
+        label: Ersatzteilanfrage
+        renderables:
+          -
+            type: GridRow
+            identifier: gridrow-1
+            label: Ersatzteilanfrage
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-11
+                label: 'Beschreibung:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Beschreibung:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '12'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-12
+                label: 'Ersatzteil-Nr.:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Ersatzteil-Nr.:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '4'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-13
+                label: 'Bild Nummer:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Bild Nummer:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '3'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-14
+                label: 'TAV Nr:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'TAV Nr:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '2'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-15
+                label: 'Anzahl:'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Anzahl:'
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '2'
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: page-2
+    label: 'Ihre Kontaktdaten'
+    renderables:
+      -
+        properties:
+          text: 'Schritt 2: Wir brauchen nur diese wenigen persönlichen Daten.'
+        type: StaticText
+        identifier: trust-us
+        label: 'Vertrauen Sie uns!'
+      -
+        type: Fieldset
+        identifier: fieldset-person
+        label: Person
+        renderables:
+          -
+            properties:
+              options:
+                Mr: Herr
+                Mrs: Fräulein
+                Ms: Frau
+              fluidAdditionalAttributes:
+                required: required
+            type: SingleSelect
+            identifier: title
+            label: Titel
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: firstname
+            label: Vorname
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: lastname
+            label: Nachname
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: company
+            label: Firma
+      -
+        type: Fieldset
+        identifier: fieldset-address
+        label: Lieferadresse
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: address
+            label: Strasse
+          -
+            defaultValue: ''
+            type: Text
+            identifier: zip
+            label: Postleitzahl
+          -
+            defaultValue: ''
+            type: Text
+            identifier: city
+            label: Stadt
+          -
+            defaultValue: ''
+            type: Text
+            identifier: country
+            label: Land
+          -
+            type: Fieldset
+            identifier: fieldset-contact
+            label: 'Kontakt Information'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: email
+                label: 'E-Mail Adresse'
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                validators:
+                  -
+                    identifier: EmailAddress
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                type: Text
+                identifier: telephone
+                label: Telefon
+              -
+                defaultValue: ''
+                type: Text
+                identifier: fax
+                label: Fax
+              -
+                defaultValue: ''
+                type: Text
+                identifier: www
+                label: Webseite
+      -
+        type: Checkbox
+        identifier: checkbox-5
+        label: ' Zustimmung zur Datenspeicherung lt. DSGVO'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        label: 'Content element'
+        properties:
+          contentElementUid: '224'
+        type: ContentElement
+        identifier: contentelement-2
+      -
+        label: 'Content element'
+        properties:
+          contentElementUid: '311'
+        type: ContentElement
+        identifier: contentelement-1
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorheriger Schritt'
+      nextButtonLabel: 'Nächster Schritt'
+    type: SummaryPage
+    identifier: summarypage
+    label: Zusammenfassung

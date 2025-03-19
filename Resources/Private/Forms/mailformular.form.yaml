@@ -17,26 +17,26 @@ finishers:
       translation:
         language: default
       recipients:
-        kontakt@schmidt-ermstedt.de: 'Gebrüder Schmidt GbR Landtechnik-Werksvertretung'
+        facebook@schmidt-ermstedt.de: 'kontakt Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
     identifier: EmailToReceiver
   -
     options:
-      subject: 'Gebr. Schmidt GbR: Ihre Webseitenanfrage: {text-3}'
+      subject: 'Heiko und Mario Schmidt GbR: Ihre Webseitenanfrage: {text-3}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{name}'
       attachUploads: false
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
       translation:
-        language: default
+        language: 'default'
       recipients:
         '{email}': '{name}'
       addHtmlPart: true
       replyToRecipients:
-        kontakt@schmidt-ermstedt.de: ''
+        facebook@schmidt-ermstedt.de: 'kontakt Heiko und Mario Schmidt GbR'
     identifier: EmailToSender
   -
     options:
@@ -114,7 +114,7 @@ renderables:
         defaultValue: ''
         type: Text
         identifier: text-3
-        label: Thema
+        label: Betreff
         properties:
           fluidAdditionalAttributes:
             required: required

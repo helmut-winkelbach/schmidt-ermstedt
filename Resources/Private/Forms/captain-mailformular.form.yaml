@@ -16,14 +16,14 @@ finishers:
       translation:
         language: ''
       recipients:
-        kontakt@schmidt-ermstedt.de: 'Gebrüder Schmidt GbR Landtechnik-Werksvertretung'
+        facebook@schmidt-ermstedt.de: 'kontakt Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
     identifier: EmailToReceiver
   -
     options:
-      subject: 'Gebr. Schmidt GbR: Ihre Webseitenanfrage: {text-3}'
+      subject: 'Heiko und Mario Schmidt GbR: Ihre Webseitenanfrage: {text-3}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{name}'
       attachUploads: false
@@ -35,7 +35,7 @@ finishers:
         '{email}': '{name}'
       addHtmlPart: true
       replyToRecipients:
-        kontakt@schmidt-ermstedt.de: ''
+        facebook@schmidt-ermstedt.de: 'kontakt'
     identifier: EmailToSender
   -
     options:

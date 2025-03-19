@@ -8,7 +8,7 @@ prototypeName: standard
 finishers:
   -
     options:
-      subject: 'Ihre Nachricht: {subject}'
+      subject: 'Ersatzteilanfrage: {text-99}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{firstname} {lastname}'
       attachUploads: true
@@ -17,26 +17,26 @@ finishers:
       translation:
         language: ''
       recipients:
-        lager@schmidt-ermstedt.de: 'Lager Gebr. Schmidt GbR'
+        facebook@schmidt-ermstedt.de: 'Lager Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
     identifier: EmailToReceiver
   -
     options:
-      subject: 'Gebr. Schmidt GbR: Ihre Webseitenanfrage: {subject}'
+      subject: 'Heiko und Mario Schmidt GbR: Ihre Webseitenanfrage: {text-99}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{firstname} {lastname}'
-      attachUploads: false
+      attachUploads: true
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
       translation:
         language: ''
       recipients:
-        '{email}': '{subject}'
+        '{email}': '{text-99}'
       addHtmlPart: true
       replyToRecipients:
-      lager@schmidt-ermstedt.de: 'Lager Gebr. Schmidt GbR'
+        facebook@schmidt-ermstedt.de: 'lager Heiko und Mario Schmidt GbR'
     identifier: EmailToSender
   -
     options:
@@ -71,7 +71,7 @@ renderables:
               fluidAdditionalAttributes:
                 required: required
             type: SingleSelect
-            identifier: subject
+            identifier: 'text-99'
             label: Betreff
             validators:
               -

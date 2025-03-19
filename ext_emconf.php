@@ -9,12 +9,12 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'php' => '8.2.0-8.3.99',
-            'typo3' => '12.4.0-13.2.99',
-            'backend' => '12.4.0-13.2.99',
-            'frontend' => '12.4.0-13.2.99',
-            'rte_ckeditor' => '12.4.0-13.2.99',
-            'fluid_styled_content' => '12.4.0-13.2.99',
+            'php' => '8.2.0-8.4.99',
+            'typo3' => '12.4.0-13.4.99',
+            'backend' => '12.4.0-13.4.99',
+            'frontend' => '12.4.0-13.4.99',
+            'rte_ckeditor' => '12.4.0-13.4.99',
+            'fluid_styled_content' => '12.4.0-13.4.99',
         ],
         'conflicts' => [
         ],
@@ -31,5 +31,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Helmut Winkelbach',
     'author_email' => 'helmut@winkelbach-web.de',
     'author_company' => 'Winkelbach',
-    'version' => '4.1.0',
+    'version' => '4.2.0',
 ];
