@@ -4,20 +4,6 @@
         <header/>
         <body>
 
-            <trans-unit id="content_element.accordion">
-                <source>Accordion</source>
-            </trans-unit>
-            <trans-unit id="content_element.accordion.description">
-                <source>Insert several Accordionelement(s) with headline and text</source>
-            </trans-unit>
-
-            <trans-unit id="content_element.timeline">
-                <source>Timeline</source>
-            </trans-unit>
-            <trans-unit id="content_element.timeline.description">
-                <source>Insert a element to display a timeline</source>
-            </trans-unit>
-
             <trans-unit id="advanced">
                 <source>Advanced</source>
             </trans-unit>
@@ -33,19 +19,16 @@
             <trans-unit id="pages.nav_icon">
                 <source>Pages Nav_icon</source>
             </trans-unit>
-            <trans-unit id="timeline.options">
-                <source>Timeline Options</source>
+            
+            <trans-unit id="content_element.accordion">
+                <source>Accordion</source>
             </trans-unit>
-            <trans-unit id="timeline.sorting">
-                <source>Sorting</source>
+            <trans-unit id="content_element.accordion.description">
+                <source>Insert several Accordionelement(s) with headline and text</source>
             </trans-unit>
-            <trans-unit id="timeline.sorting.asc">
-                <source>Ascending</source>
+            <trans-unit id="accordion_item">
+                <source>Accordion Item</source>
             </trans-unit>
-            <trans-unit id="timeline.sorting.desc">
-                <source>Descending</source>
-            </trans-unit>
-
             <trans-unit id="accordion.options">
                 <source>Accordion Options</source>
             </trans-unit>
@@ -53,9 +36,6 @@
                 <source>Default Element</source>
             </trans-unit>
 
-            <trans-unit id="accordion_item">
-                <source>Accordion Item</source>
-            </trans-unit>
             <trans-unit id="accordion_item.tt_content">
                 <source>Accordion</source>
             </trans-unit>
@@ -93,6 +73,26 @@
                 <source>Bottom</source>
             </trans-unit>
 
+            <trans-unit id="content_element.timeline">
+                <source>Timeline</source>
+            </trans-unit>
+            <trans-unit id="content_element.timeline.description">
+                <source>Insert a element to display a timeline</source>
+            </trans-unit>
+            
+            <trans-unit id="timeline.options">
+                <source>Timeline Options</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting">
+                <source>Sorting</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting.asc">
+                <source>Ascending</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting.desc">
+                <source>Descending</source>
+            </trans-unit>
+
             <trans-unit id="timeline_item">
                 <source>Timeline Item</source>
             </trans-unit>
@@ -102,14 +102,17 @@
             <trans-unit id="timeline_item.date">
                 <source>Date</source>
             </trans-unit>
-            <trans-unit id="timeline_item.datum">
-                <source>Datum</source>
-            </trans-unit>
             <trans-unit id="timeline_item.header">
                 <source>Header</source>
             </trans-unit>
             <trans-unit id="timeline_item.bodytext">
                 <source>Text</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.icon_set">
+                <source>Icon Set</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.icon_identifier">
+                <source>Icon</source>
             </trans-unit>
             <trans-unit id="timeline_item.icon_file">
                 <source>Icon File</source>
@@ -118,6 +121,37 @@
                 <source>Image</source>
             </trans-unit>
 
+            <trans-unit id="ratio.16_9">
+                <source>16:9</source>
+            </trans-unit>
+            <trans-unit id="ratio.4_3">
+                <source>4:3</source>
+            </trans-unit>
+            <trans-unit id="ratio.1_1">
+                <source>1:1</source>
+            </trans-unit>
+            <trans-unit id="ratio.free">
+                <source>Free</source>
+            </trans-unit>
+
+            <trans-unit id="option.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="option.extrasmall">
+                <source>Extra Small</source>
+            </trans-unit>
+            <trans-unit id="option.small">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="option.medium">
+                <source>Medium</source>
+            </trans-unit>
+            <trans-unit id="option.xlarge">
+                <source>Extra Large</source>
+            </trans-unit>
+            <trans-unit id="option.large">
+                <source>Large</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

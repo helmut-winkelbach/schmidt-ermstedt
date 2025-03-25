@@ -26,10 +26,11 @@ if (!is_array($GLOBALS['TCA']['tt_content']['types']['accordion'] ?? false)) {
     'tt_content',
     'CType',
     [
-        'LLL:EXT:schmidt_ermstedt/Resources/Private/Language/Backend.xlf:content_element.accordion',
-        'accordion',
-        'content-bootstrappackage-accordion',
-        'bootstrap_package'
+        'label' => 'LLL:EXT:schmidt_ermstedt/Resources/Private/Language/Backend.xlf:content_element.accordion',
+        'description' => 'LLL:EXT:schmidt_ermstedt/Resources/Private/Language/Backend.xlf:content_element.accordion.description',
+        'value' => 'accordion',
+        'icon' => 'content-bootstrappackage-accordion',
+        'group' => 'bootstrap_package',
     ]
 );
 

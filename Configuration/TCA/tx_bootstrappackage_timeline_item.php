@@ -10,10 +10,10 @@
 return [
     'ctrl' => [
         'label' => 'header',
-        'label_userFunc' => WinkelbachWebdesign\WinkelbachDistribution\Userfuncs\Tca::class . '->timelineItemLabel',
+        'label_userFunc' => WinkelbachWebdesign\SchmidtErmstedt\Userfuncs\Tca::class . '->timelineItemLabel',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'title' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item',
+        'title' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item',
         'delete' => 'deleted',
         'versioningWS' => true,
         'origUid' => 't3_origuid',
@@ -71,7 +71,7 @@ return [
         ],
         'visibility' => [
             'showitem' => '
-                hidden;LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item
+                hidden;LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item
             ',
         ],
         // hidden but needs to be included all the time, so sys_language_uid is set correctly
@@ -83,7 +83,7 @@ return [
     'columns' => [
         'tt_content' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.tt_content',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.tt_content',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -116,6 +116,7 @@ return [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'datetime',
+                'format' => 'date',
                 'default' => 0,
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038),
@@ -153,17 +154,17 @@ return [
         ],
         'date' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.date',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.date',
             'config' => [
                 'type' => 'datetime',
                 'dbType' => 'datetime',
-                'nullable' => true,
+                'required' => true,
             ],
             'l10n_mode' => 'exclude',
         ],
         'header' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.header',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.header',
             'config' => [
                 'type' => 'input',
                 'size' => 50,
@@ -172,7 +173,7 @@ return [
             ],
         ],
         'bodytext' => [
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.bodytext',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.bodytext',
             'l10n_mode' => 'prefixLangTitle',
             'l10n_cat' => 'text',
             'config' => [
@@ -184,22 +185,22 @@ return [
             ],
         ],
         'icon_set' => [
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.icon_set',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.icon_set',
             'onChange' => 'reload',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'itemsProcFunc' => 'WinkelbachWebdesign\WinkelbachDistribution\Service\IconService->getIconSetItems',
+                'itemsProcFunc' => 'WinkelbachWebdesign\SchmidtErmstedt\Service\IconService->getIconSetItems',
             ],
             'l10n_mode' => 'exclude',
         ],
         'icon_identifier' => [
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.icon_identifier',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.icon_identifier',
             'displayCond' => 'FIELD:icon_set:REQ:true',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'itemsProcFunc' => 'WinkelbachWebdesign\WinkelbachDistribution\Service\IconService->getIconItems',
+                'itemsProcFunc' => 'WinkelbachWebdesign\SchmidtErmstedt\Service\IconService->getIconItems',
                 'itemsProcConfig' => [
                     'iconSetField' => 'icon_set',
                 ],
@@ -213,20 +214,13 @@ return [
             'l10n_mode' => 'exclude',
         ],
         'icon_file' => [
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.icon_file',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.icon_file',
             'displayCond' => 'FIELD:icon_set:REQ:false',
             'config' => [
                 'type' => 'file',
                 'allowed' => ['gif', 'png', 'svg'],
                 'appearance' => [
                     'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.asset_references.addFileReference',
-                ],
-                'overrideChildTca' => [
-                    'types' => [
-                        \TYPO3\CMS\Core\Resource\FileType::IMAGE->value => [
-                            'showitem' => '--palette--;;filePalette',
-                        ],
-                    ],
                 ],
                 'minitems' => 0,
                 'maxitems' => 1,
@@ -235,21 +229,12 @@ return [
         ],
         'image' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:timeline_item.image',
+            'label' => 'LLL:EXT:schmidt-ermstedt/Resources/Private/Language/Backend.xlf:timeline_item.image',
             'config' => [
                 'type' => 'file',
                 'allowed' => 'common-image-types',
                 'minitems' => 0,
                 'maxitems' => 1,
-                'overrideChildTca' => [
-                    'types' => [
-                        \TYPO3\CMS\Core\Resource\FileType::IMAGE->value => [
-                            'showitem' => '
-                                --palette--;;imageoverlayPalette,
-                                --palette--;;filePalette',
-                        ],
-                    ],
-                ],
             ],
         ],
     ],

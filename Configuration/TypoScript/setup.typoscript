@@ -114,6 +114,7 @@ page {
 	30.disableCompression = 1
 	40 = {$resDir}/Resources/Public/JavaScript/custom.js
 	40.async = 1
+  accordion = EXT:schmidt_ermstedt/Resources/Public/JavaScript/accordion.min.js
   media2click = {$resDir}/Resources/Public/JavaScript/media2click.js
   media2click.forceOnTop = 1
 	lightbox = {$resDir}/Resources/Public/JavaScript/lightbox.min-EN.js

@@ -4,7 +4,7 @@ renderingOptions:
 identifier: AnmeldeformularGeraeteeinsendung
 label: Anmeldeformular Geräteeinsendung
 type: Form
-prototypeName: complaintForm
+prototypeName: standard
 finishers:
   -
     options:

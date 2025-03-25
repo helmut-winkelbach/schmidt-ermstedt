@@ -8,7 +8,7 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['schmidt_ermstedt'] = 'EXT:schmidt
 /***************
  * PageTS
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/All.tsconfig">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('@import "EXT:schmidt_ermstedt/Configuration/TsConfig/Page/All.tsconfig"');
 
 // Register Icons
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
@@ -20,8 +20,9 @@ $iconRegistry->registerIcon(
 $icons = [
     'timeline',
     'timeline-item',
-    'accordion',
+/***    'accordion',
     'accordion-item'
+***/
 ];
 foreach ($icons as $icon) {
     $iconRegistry->registerIcon(
@@ -30,6 +31,7 @@ foreach ($icons as $icon) {
         ['source' => 'EXT:schmidt_ermstedt/Resources/Public/Icons/' . $icon . '.svg']
     );
 }
+/*
 return [
     'content-bootstrappackage-accordion' => [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
@@ -40,4 +42,4 @@ return [
         'source' => 'EXT:schmidt_ermstedt/Resources/Public/Icons/ContentElements/accordion-item.svg'
     ],
 ];
-
+*/
