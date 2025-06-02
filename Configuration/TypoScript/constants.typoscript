@@ -1,12 +1,12 @@
-### Constants Root Template 12 LTS ###
-#siteurl = https://www.schmidtermstedt.de/
-siteurl = https://www.composer.schmidtermstedt.de/
-siteName = Landtechnik-Werksvertretung Gebr. Schmidt GbR in Erfurt-Ermstedt
+### Constants Root Template 13 LTS ###
+siteurl = https://www.schmidtermstedt.de/
+#siteurl = https://www.composer.schmidtermstedt.de/
+siteName = Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung in Erfurt-Ermstedt
 rootId = 1
 searchId = 82
 searchName = Suche
 
-page.theme.copyright.text = &nbsp;<a href="mailto:mario@schmidt-ermstedt.de?subject=From-Homepage-www.schmidtermstedt.de/">Gebr. Schmidt Ermstedt Landtechnik - Werksvertretun</a>
+page.theme.copyright.text = &nbsp;<a href="mailto:mario@schmidt-ermstedt.de?subject=From-Homepage-www.schmidtermstedt.de/">Heiko und Mario Schmidt GbR Landtechnik Werksvertretung</a>
 
 plugin.bootstrap_package_contentelements {
     timeline {
@@ -139,8 +139,8 @@ page {
     }
     meta {
         description = Wir arbeiten als Werksvertretung für italienische Hersteller im Bereich Land-, Obst- und Weinbautechnik, Motorgeräte und vertreiben deren Produkte und Ersatzteile.
-        author = Gebr. Schmidt Ermstedt Landtechnik - Werksvertretung
-        keywords = Landtechnik Werksvertretung Gebr. Schmidt Erfurt-Ermstedt, Landmschinen,Traktoren,Schlepper,Felder und Gärtenmaschinen,Landwirtschaft,Landtechnik,Werksvertretung Obst &amp;amp; Weinbautechnik, Motorgeräte, Ersatzteile
+        author = Heiko und Mario Schmidt GbR Landtechnik Werksvertretung Erfurt-Ermstedt
+        keywords = Landtechnik Werksvertretung, Gebr. Schmidt,Mario Schmidt,Heiko Schmidt,Heiko und Mario Schmidt GbR, Landtechnik Werksvertretung, Gebr. Schmidt Erfurt-Ermstedt, Landmschinen,Traktoren,Schlepper,Felder und Gärtenmaschinen,Landwirtschaft,Landtechnik,Werksvertretung Obst &amp;amp; Weinbautechnik, Motorgeräte, Ersatzteile
         viewport = width=device-width, initial-scale=1, user-scalable=1
         robots = index,follow
         apple-mobile-web-app-capable = no

@@ -16,7 +16,7 @@ finishers:
       translation:
         language: ''
       recipients:
-        facebook@schmidt-ermstedt.de: 'kontakt Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
@@ -35,7 +35,7 @@ finishers:
         '{email}': '{name}'
       addHtmlPart: true
       replyToRecipients:
-        facebook@schmidt-ermstedt.de: 'kontakt'
+        kontakt@schmidt-ermstedt.de: 'kontakt'
     identifier: EmailToSender
   -
     options:

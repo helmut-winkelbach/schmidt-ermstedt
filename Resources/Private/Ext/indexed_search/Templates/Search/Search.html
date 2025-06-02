@@ -32,7 +32,7 @@
 						</table>
 					</div>
 				</f:if>
-				<is:pageBrowsing maximumNumberOfResultPages="{settings.page_links}" numberOfResults="{result.count}" currentPage="{searchParams.pointer}" resultsPerPage="{searchParams.numberOfResults}" />
+                <f:render partial="Pagination" arguments="{pagination: result.pagination, searchParams: searchParams}" />
 			</div> <br /> <br /> <br />
 			<f:for each="{result.rows}" as="row">
 				<f:if condition="{row.isSectionHeader}">
@@ -47,7 +47,7 @@
 				</f:if>
 			</f:for>
 			<div class="tx-indexedsearch-browsebox">
-				<is:pageBrowsing numberOfResults="{result.count}" maximumNumberOfResultPages="{settings.page_links}" currentPage="{searchParams.pointer}" resultsPerPage="{searchParams.numberOfResults}" />
+                <f:render partial="Pagination" arguments="{pagination: result.pagination, searchParams: searchParams, freeIndexUid: freeIndexUid}" />
 			</div>
 		</div>
 		</f:then>

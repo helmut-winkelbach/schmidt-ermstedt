@@ -17,7 +17,7 @@ finishers:
       translation:
         language: default
       recipients:
-        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Ermstedt'
+        kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Ermstedt'
       addHtmlPart: true
     identifier: EmailToReceiver
   -

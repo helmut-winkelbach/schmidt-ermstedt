@@ -18,7 +18,7 @@ finishers:
       translation:
         language: ''
       recipients:
-        facebook@schmidt-ermstedt.de: 'maeder Heiko und Mario Schmidt GbR Ermstedt'
+        maeder@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Ermstedt'
       replyToRecipients:
         '{text-2}': ''
       addHtmlPart: true

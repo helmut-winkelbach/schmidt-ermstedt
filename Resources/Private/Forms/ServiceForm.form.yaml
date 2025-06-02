@@ -17,7 +17,7 @@ finishers:
       translation:
         language: ''
       recipients:
-        facebook@schmidt-ermstedt.de: 'Lager Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
@@ -36,7 +36,7 @@ finishers:
         '{email}': '{text-99}'
       addHtmlPart: true
       replyToRecipients:
-        facebook@schmidt-ermstedt.de: 'lager Heiko und Mario Schmidt GbR'
+        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
     identifier: EmailToSender
   -
     options:

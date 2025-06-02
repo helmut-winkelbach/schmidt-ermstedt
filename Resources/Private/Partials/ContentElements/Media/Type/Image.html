@@ -1,10 +1,9 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
 <figure class="image">
-    <f:if condition="{file.properties.link}">
+    <f:if condition="{file.link}">
         <f:then>
-            <f:link.typolink parameter="{file.properties.link}" title="{file.properties.title}">
-                <f:render partial="Media/Rendering/Image" arguments="{file: file, data: data, settings: settings, variants: variants}" />
+            <f:link.typolink parameter="{file.link}" title="{file.title}">
+                <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
             </f:link.typolink>
         </f:then>
         <f:else>
@@ -15,13 +14,15 @@ xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-nam
                     </ce:link.clickEnlarge>
                 </f:then>
                 <f:else>
-                    <f:render partial="Media/Rendering/Image" arguments="{file: file, data: data, settings: settings, variants: variants}" />
+                    <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
                 </f:else>
             </f:if>
         </f:else>
     </f:if>
-    <f:if condition="{file.properties.description}">
-        <figcaption class="caption"><f:format.htmlentitiesDecode>{file.properties.description}</f:format.htmlentitiesDecode></figcaption>
+    <f:if condition="{file.description}">
+        <figcaption class="image-caption">
+            {file.description -> f:format.nl2br()}
+        </figcaption>
     </f:if>
 </figure>
 </html>

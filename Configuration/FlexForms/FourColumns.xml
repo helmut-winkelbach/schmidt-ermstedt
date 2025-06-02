@@ -2,22 +2,22 @@
 	<sheets>
 		<sDEF>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Settings</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<equalWidth>
-						<TCEforms>
+						
 							<label>Equal width</label>
 							<onChange>reload</onChange>
 							<config>
 								<type>check</type>
 								<default>0</default>
 							</config>
-						</TCEforms>
+						
 					</equalWidth>
 					<horizontalGutters>
-						<TCEforms>
+						
 							<label>Horizontal gutters</label>
 							<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#horizontal-gutters</description>
 							<config>
@@ -51,10 +51,10 @@
 								</items>
 								<default></default>
 							</config>
-						</TCEforms>
+						
 					</horizontalGutters>
 					<verticalGutters>
-						<TCEforms>
+						
 							<label>Vertical gutters</label>
 							<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#vertical-gutters</description>
 							<config>
@@ -88,16 +88,16 @@
 								</items>
 								<default></default>
 							</config>
-						</TCEforms>
+						
 					</verticalGutters>
 				</el>
 			</ROOT>
 		</sDEF>
 		<extraClass>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Extra Class</sheetTitle>
-				</TCEforms>
+				
 				<type>array</type>
 				<el>
 					<extraClass_one>
@@ -106,7 +106,7 @@
 							<config>
 								<type>input</type>
 							</config>
-						</TCEforms>
+						
 					</extraClass_one>
 					<extraClass_two>
 						<TCEforms type="array">
@@ -114,7 +114,7 @@
 							<config>
 								<type>input</type>
 							</config>
-						</TCEforms>
+						
 					</extraClass_two>
 					<extraClass_three>
 						<TCEforms type="array">
@@ -122,7 +122,7 @@
 							<config>
 								<type>input</type>
 							</config>
-						</TCEforms>
+						
 					</extraClass_three>
 					<extraClass_four>
 						<TCEforms type="array">
@@ -130,19 +130,19 @@
 							<config>
 								<type>input</type>
 							</config>
-						</TCEforms>
+						
 					</extraClass_four>
 				</el>
 			</ROOT>
 		</extraClass>
 		<xxl>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-xxl-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<xxl_one>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -208,10 +208,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xxl_one>
 					<xxl_two>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -277,10 +277,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xxl_two>
 					<xxl_three>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -346,10 +346,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xxl_three>
 					<xxl_four>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -415,19 +415,19 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xxl_four>
 				</el>
 			</ROOT>
 		</xxl>
 		<xl>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-xl-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<xl_one>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -493,10 +493,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xl_one>
 					<xl_two>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -562,10 +562,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xl_two>
 					<xl_three>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -631,10 +631,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xl_three>
 					<xl_four>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -700,19 +700,19 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xl_four>
 				</el>
 			</ROOT>
 		</xl>
 		<lg>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-lg-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<lg_one>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -778,10 +778,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</lg_one>
 					<lg_two>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -847,10 +847,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</lg_two>
 					<lg_three>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -916,10 +916,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</lg_three>
 					<lg_four>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -985,19 +985,19 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</lg_four>
 				</el>
 			</ROOT>
 		</lg>
 		<md>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-md-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<md_one>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -1063,10 +1063,10 @@
 									</items>
 									<default>3</default>
 							</config>
-						</TCEforms>
+						
 					</md_one>
 					<md_two>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -1132,10 +1132,10 @@
 									</items>
 									<default>3</default>
 							</config>
-						</TCEforms>
+						
 					</md_two>
 					<md_three>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -1201,10 +1201,10 @@
 									</items>
 									<default>3</default>
 							</config>
-						</TCEforms>
+						
 					</md_three>
 					<md_four>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -1270,19 +1270,19 @@
 									</items>
 									<default>3</default>
 							</config>
-						</TCEforms>
+						
 					</md_four>
 				</el>
 			</ROOT>
 		</md>
 		<sm>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-sm-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<sm_one>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -1348,10 +1348,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</sm_one>
 					<sm_two>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -1417,10 +1417,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</sm_two>
 					<sm_three>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -1486,10 +1486,10 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</sm_three>
 					<sm_four>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -1555,19 +1555,19 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</sm_four>
 				</el>
 			</ROOT>
 		</sm>
 		<xs>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<xs_one>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -1633,10 +1633,10 @@
 									</items>
 									<default>12</default>
 							</config>
-						</TCEforms>
+						
 					</xs_one>
 					<xs_two>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -1702,10 +1702,10 @@
 									</items>
 									<default>12</default>
 							</config>
-						</TCEforms>
+						
 					</xs_two>
 					<xs_three>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -1771,10 +1771,10 @@
 									</items>
 									<default>12</default>
 							</config>
-						</TCEforms>
+						
 					</xs_three>
 					<xs_four>
-						<TCEforms>
+						
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -1840,7 +1840,7 @@
 									</items>
 									<default>12</default>
 							</config>
-						</TCEforms>
+						
 					</xs_four>
 				</el>
 			</ROOT>

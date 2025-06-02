@@ -2,22 +2,22 @@
 	<sheets>
 		<sDEF>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Settings</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<equalWidth>
-						<TCEforms>
+						
 							<label>Equal width</label>
 							<onChange>reload</onChange>
 							<config>
 								<type>check</type>
 								<default>0</default>
 							</config>
-						</TCEforms>
+						
 					</equalWidth>
 					<horizontalGutters>
-						<TCEforms>
+						
 							<label>Horizontal gutters</label>
 							<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#horizontal-gutters</description>
 							<config>
@@ -51,10 +51,10 @@
 								</items>
 								<default></default>
 							</config>
-						</TCEforms>
+						
 					</horizontalGutters>
 					<verticalGutters>
-						<TCEforms>
+						
 							<label>Vertical gutters</label>
 							<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#vertical-gutters</description>
 							<config>
@@ -88,16 +88,16 @@
 								</items>
 								<default></default>
 							</config>
-						</TCEforms>
+						
 					</verticalGutters>
 				</el>
 			</ROOT>
 		</sDEF>
 		<extraClass>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Extra Class</sheetTitle>
-				</TCEforms>
+				
 				<type>array</type>
 				<el>
 					<extraClass_one>
@@ -106,7 +106,7 @@
 							<config>
 								<type>input</type>
 							</config>
-						</TCEforms>
+						
 					</extraClass_one>
 					<extraClass_two>
 						<TCEforms type="array">
@@ -114,7 +114,7 @@
 							<config>
 								<type>input</type>
 							</config>
-						</TCEforms>
+						
 					</extraClass_two>
 					<extraClass_three>
 						<TCEforms type="array">
@@ -122,16 +122,16 @@
 							<config>
 								<type>input</type>
 							</config>
-						</TCEforms>
+						
 					</extraClass_three>
 				</el>
 			</ROOT>
 		</extraClass>
 		<xxl>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-xl-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<xxl_one>
 						<TCEforms type="array">
@@ -201,7 +201,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xxl_one>
 					<xxl_two>
 						<TCEforms type="array">
@@ -271,7 +271,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xxl_two>
 					<xxl_three>
 						<TCEforms type="array">
@@ -341,16 +341,16 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xxl_three>
 				</el>
 			</ROOT>
 		</xxl>
 		<xl>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-xl-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<xl_one>
 						<TCEforms type="array">
@@ -420,7 +420,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xl_one>
 					<xl_two>
 						<TCEforms type="array">
@@ -490,7 +490,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xl_two>
 					<xl_three>
 						<TCEforms type="array">
@@ -560,16 +560,16 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</xl_three>
 				</el>
 			</ROOT>
 		</xl>
 		<lg>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-lg-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<lg_one>
 						<TCEforms type="array">
@@ -639,7 +639,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</lg_one>
 					<lg_two>
 						<TCEforms type="array">
@@ -709,7 +709,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</lg_two>
 					<lg_three>
 						<TCEforms type="array">
@@ -779,16 +779,16 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</lg_three>
 				</el>
 			</ROOT>
 		</lg>
 		<md>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-md-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<md_one>
 						<TCEforms type="array">
@@ -858,7 +858,7 @@
 									</items>
 									<default>4</default>
 							</config>
-						</TCEforms>
+						
 					</md_one>
 					<md_two>
 						<TCEforms type="array">
@@ -928,7 +928,7 @@
 									</items>
 									<default>4</default>
 							</config>
-						</TCEforms>
+						
 					</md_two>
 					<md_three>
 						<TCEforms type="array">
@@ -998,16 +998,16 @@
 									</items>
 									<default>4</default>
 							</config>
-						</TCEforms>
+						
 					</md_three>
 				</el>
 			</ROOT>
 		</md>
 		<sm>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-sm-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<sm_one>
 						<TCEforms type="array">
@@ -1077,7 +1077,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</sm_one>
 					<sm_two>
 						<TCEforms type="array">
@@ -1147,7 +1147,7 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</sm_two>
 					<sm_three>
 						<TCEforms type="array">
@@ -1217,16 +1217,16 @@
 									</items>
 									<default></default>
 							</config>
-						</TCEforms>
+						
 					</sm_three>
 				</el>
 			</ROOT>
 		</sm>
 		<xs>
 			<ROOT>
-				<TCEforms>
+				
 					<sheetTitle>Col-*</sheetTitle>
-				</TCEforms>
+				
 				<el>
 					<xs_one>
 						<TCEforms type="array">
@@ -1296,7 +1296,7 @@
 									</items>
 									<default>12</default>
 							</config>
-						</TCEforms>
+						
 					</xs_one>
 					<xs_two>
 						<TCEforms type="array">
@@ -1366,7 +1366,7 @@
 									</items>
 									<default>12</default>
 							</config>
-						</TCEforms>
+						
 					</xs_two>
 					<xs_three>
 						<TCEforms type="array">
@@ -1436,7 +1436,7 @@
 									</items>
 									<default>12</default>
 							</config>
-						</TCEforms>
+						
 					</xs_three>
 				</el>
 			</ROOT>

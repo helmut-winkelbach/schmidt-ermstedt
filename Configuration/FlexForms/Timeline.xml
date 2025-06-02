@@ -6,13 +6,13 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
+                
                     <sheetTitle>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/Backend.xlf:settings</sheetTitle>
-                </TCEforms>
+                
                 <type>array</type>
                 <el>
                     <sorting>
-                        <TCEforms>
+                        
                             <label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/Backend.xlf:timeline.sorting
                             </label>
                             <config>
@@ -29,7 +29,7 @@
                                     </numIndex>
                                 </items>
                             </config>
-                        </TCEforms>
+                        
                     </sorting>
                 </el>
             </ROOT>
