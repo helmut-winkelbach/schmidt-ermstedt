@@ -1,0 +1,4 @@
+#
+# BACKENDLAYOUTS
+#
+@import 'EXT:schmidt_ermstedt/Configuration/TsConfig/Page/BackendLayouts' extensions='tsconfig'

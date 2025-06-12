@@ -1,4 +1,0 @@
-#
-# BACKENDLAYOUTS
-#
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">

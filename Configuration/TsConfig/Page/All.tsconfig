@@ -1,8 +1,8 @@
 #
 # PageTS for Schmidt-Ermstedt
 #
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/RTE.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/User.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/TCEFORM.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:schmidt_ermstedt/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+@import 'EXT:schmidt_ermstedt/Configuration/TsConfig/Page/RTE.tsconfig'
+@import 'EXT:schmidt_ermstedt/Configuration/TsConfig/Page/User.tsconfig'
+@import 'EXT:schmidt_ermstedt/Configuration/TsConfig/Page/TCEFORM.tsconfig'
+@import 'EXT:schmidt_ermstedt/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
+@import 'EXT:schmidt_ermstedt/Configuration/TsConfig/Page/BackendLayouts.tsconfig'

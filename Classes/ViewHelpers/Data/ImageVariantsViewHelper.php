@@ -7,9 +7,9 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace WinkelbachWebdesign\WinkelbachDistribution\ViewHelpers\Data;
+namespace WinkelbachWebdesign\SchmidtErmstedt\ViewHelpers\Data;
 
-use WinkelbachWebdesign\WinkelbachDistribution\Utility\ImageVariantsUtility;
+use WinkelbachWebdesign\SchmidtErmstedt\Utility\ImageVariantsUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**

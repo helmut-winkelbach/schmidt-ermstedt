@@ -8,10 +8,10 @@ declare(strict_types = 1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace WinkelbachWebdesign\WinkelbachDistribution\DataProcessing;
+namespace WinkelbachWebdesign\SchmidtErmstedt\DataProcessing;
 
-use WinkelbachWebdesign\WinkelbachDistribution\Icons\FileIcon;
-use WinkelbachWebdesign\WinkelbachDistribution\Service\IconService;
+use WinkelbachWebdesign\SchmidtErmstedt\Icons\FileIcon;
+use WinkelbachWebdesign\SchmidtErmstedt\Service\IconService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
@@ -20,7 +20,7 @@ use TYPO3\CMS\Frontend\DataProcessing\FilesProcessor;
 /**
  * Minimal TypoScript configuration
  *
- * 10 = WinkelbachWebdesign\WinkelbachDistribution\DataProcessing\IconsDataProcessor
+ * 10 = WinkelbachWebdesign\SchmidtErmstedt\DataProcessing\IconsDataProcessor
  * 10 {
  *   iconSetFieldName = icon_set
  *   iconIdentifierFieldName = icon

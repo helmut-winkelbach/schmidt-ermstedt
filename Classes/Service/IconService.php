@@ -8,9 +8,9 @@ declare(strict_types = 1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace WinkelbachWebdesign\WinkelbachDistribution\Service;
+namespace WinkelbachWebdesign\schmidt-ermstedt\Service;
 
-use WinkelbachWebdesign\WinkelbachDistribution\Icons\IconProviderInterface;
+use WinkelbachWebdesign\schmidt-ermstedt\Icons\IconProviderInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**

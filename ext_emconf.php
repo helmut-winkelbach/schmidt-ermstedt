@@ -31,5 +31,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Helmut Winkelbach',
     'author_email' => 'helmut@winkelbach-web.de',
     'author_company' => 'Winkelbach',
-    'version' => '4.2.0',
+    'version' => '4.3.0',
 ];
