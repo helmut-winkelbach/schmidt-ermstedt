@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  WinkelbachWebdesign\SchmidtErmstedt\Command\FixMmDuplicatesCommand:
+    tags:
+      - name: 'console.command'
+        command: 'upgrade:fixmmduplicates'
+        schedulable: false

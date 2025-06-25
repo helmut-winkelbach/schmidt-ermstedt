@@ -2,22 +2,20 @@
 	<sheets>
 		<sDEF>
 			<ROOT>
-				
-					<sheetTitle>Settings</sheetTitle>
-				
+				<sheetTitle>Settings</sheetTitle>
 				<el>
 					<equalWidth>
-						
+
 							<label>Equal width</label>
 							<onChange>reload</onChange>
 							<config>
 								<type>check</type>
 								<default>0</default>
 							</config>
-						
+
 					</equalWidth>
 					<horizontalGutters>
-						
+
 							<label>Horizontal gutters</label>
 							<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#horizontal-gutters</description>
 							<config>
@@ -51,10 +49,10 @@
 								</items>
 								<default></default>
 							</config>
-						
+
 					</horizontalGutters>
 					<verticalGutters>
-						
+
 							<label>Vertical gutters</label>
 							<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#vertical-gutters</description>
 							<config>
@@ -88,61 +86,51 @@
 								</items>
 								<default></default>
 							</config>
-						
+
 					</verticalGutters>
 				</el>
 			</ROOT>
 		</sDEF>
 		<extraClass>
 			<ROOT>
-				
+
 					<sheetTitle>Extra Class</sheetTitle>
-				
+
 				<type>array</type>
 				<el>
 					<extraClass_one>
-						<TCEforms type="array">
-							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
-							<config>
-								<type>input</type>
-							</config>
-						
+						<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
+						<config>
+							<type>input</type>
+						</config>
 					</extraClass_one>
 					<extraClass_two>
-						<TCEforms type="array">
-							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
-							<config>
-								<type>input</type>
-							</config>
-						
+						<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
+						<config>
+							<type>input</type>
+						</config>
 					</extraClass_two>
 					<extraClass_three>
-						<TCEforms type="array">
-							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
-							<config>
-								<type>input</type>
-							</config>
-						
+						<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
+						<config>
+							<type>input</type>
+						</config>
 					</extraClass_three>
 					<extraClass_four>
-						<TCEforms type="array">
-							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
-							<config>
-								<type>input</type>
-							</config>
-						
+						<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
+						<config>
+							<type>input</type>
+						</config>
 					</extraClass_four>
 				</el>
 			</ROOT>
 		</extraClass>
 		<xxl>
 			<ROOT>
-				
-					<sheetTitle>Col-xxl-*</sheetTitle>
-				
+				<sheetTitle>Col-xxl-*</sheetTitle>
 				<el>
 					<xxl_one>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -208,10 +196,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xxl_one>
 					<xxl_two>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -277,10 +265,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xxl_two>
 					<xxl_three>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -346,10 +334,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xxl_three>
 					<xxl_four>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -415,19 +403,19 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xxl_four>
 				</el>
 			</ROOT>
 		</xxl>
 		<xl>
 			<ROOT>
-				
+
 					<sheetTitle>Col-xl-*</sheetTitle>
-				
+
 				<el>
 					<xl_one>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -493,10 +481,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xl_one>
 					<xl_two>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -562,10 +550,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xl_two>
 					<xl_three>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -631,10 +619,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xl_three>
 					<xl_four>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -700,19 +688,17 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</xl_four>
 				</el>
 			</ROOT>
 		</xl>
 		<lg>
 			<ROOT>
-				
-					<sheetTitle>Col-lg-*</sheetTitle>
-				
+				<sheetTitle>Col-lg-*</sheetTitle>
 				<el>
 					<lg_one>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -778,10 +764,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</lg_one>
 					<lg_two>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -847,10 +833,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</lg_two>
 					<lg_three>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -916,10 +902,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</lg_three>
 					<lg_four>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -985,19 +971,19 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</lg_four>
 				</el>
 			</ROOT>
 		</lg>
 		<md>
 			<ROOT>
-				
+
 					<sheetTitle>Col-md-*</sheetTitle>
-				
+
 				<el>
 					<md_one>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -1063,10 +1049,10 @@
 									</items>
 									<default>3</default>
 							</config>
-						
+
 					</md_one>
 					<md_two>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -1132,10 +1118,10 @@
 									</items>
 									<default>3</default>
 							</config>
-						
+
 					</md_two>
 					<md_three>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -1201,10 +1187,10 @@
 									</items>
 									<default>3</default>
 							</config>
-						
+
 					</md_three>
 					<md_four>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -1270,19 +1256,19 @@
 									</items>
 									<default>3</default>
 							</config>
-						
+
 					</md_four>
 				</el>
 			</ROOT>
 		</md>
 		<sm>
 			<ROOT>
-				
+
 					<sheetTitle>Col-sm-*</sheetTitle>
-				
+
 				<el>
 					<sm_one>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -1348,10 +1334,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</sm_one>
 					<sm_two>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -1417,10 +1403,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</sm_two>
 					<sm_three>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -1486,10 +1472,10 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</sm_three>
 					<sm_four>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -1555,19 +1541,19 @@
 									</items>
 									<default></default>
 							</config>
-						
+
 					</sm_four>
 				</el>
 			</ROOT>
 		</sm>
 		<xs>
 			<ROOT>
-				
+
 					<sheetTitle>Col-*</sheetTitle>
-				
+
 				<el>
 					<xs_one>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.0</label>
 							<config>
 								<type>select</type>
@@ -1633,10 +1619,10 @@
 									</items>
 									<default>12</default>
 							</config>
-						
+
 					</xs_one>
 					<xs_two>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.1</label>
 							<config>
 								<type>select</type>
@@ -1702,10 +1688,10 @@
 									</items>
 									<default>12</default>
 							</config>
-						
+
 					</xs_two>
 					<xs_three>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.2</label>
 							<config>
 								<type>select</type>
@@ -1771,10 +1757,10 @@
 									</items>
 									<default>12</default>
 							</config>
-						
+
 					</xs_three>
 					<xs_four>
-						
+
 							<label>LLL:EXT:schmidt_ermstedt/Resources/Private/Language/locallang_be.xlf:tx_container.anyColumns.colPos.3</label>
 							<config>
 								<type>select</type>
@@ -1840,7 +1826,7 @@
 									</items>
 									<default>12</default>
 							</config>
-						
+
 					</xs_four>
 				</el>
 			</ROOT>

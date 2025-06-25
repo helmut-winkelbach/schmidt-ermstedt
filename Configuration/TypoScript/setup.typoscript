@@ -1,9 +1,9 @@
-### Setup Root Template 12 LTS Schmidt Ermstedt###
+### Setup Root Template 13 LTS Schmidt Ermstedt###
 @import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/0010_config.typoscript'
 @import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/0020_page.typoscript'
 @import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/0021_page.meta.typoscript'
 @import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/jumbotronbg.typoscript'
-#@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/Container.typoscript'
+@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/Container.typoscript'
 @import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ext.search.typoscript'
 @import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ContentElement.typoscript'
 #@import 'EXT:schmidt_ermstedt/Configuration/TypoScript/Library/ext.blog.typoscript'

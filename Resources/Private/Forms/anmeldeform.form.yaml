@@ -14,7 +14,7 @@ finishers:
       replyToAddress: '{text-2}'
       attachUploads: false
       templateRootPaths:
-        20: 'EXT:winkelbach_distribution/Resources/Private/Frontend/Templates/Finishers/Anmeldung/Receiver/'
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Anmeldung/Receiver/'
       translation:
         language: ''
       recipients:
@@ -30,7 +30,7 @@ finishers:
       senderName: 'Heiko und Mario Schmidt GbR Ermstedt'
       attachUploads: false
       templateRootPaths:
-        20: 'EXT:winkelbach_distribution/Resources/Private/Frontend/Templates/Finishers/Anmeldung/Sender/'
+        20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Anmeldung/Sender/'
       translation:
         language: ''
       recipients:

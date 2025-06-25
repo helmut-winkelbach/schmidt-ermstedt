@@ -54,16 +54,12 @@ page.meta {
 	date.field = SYS_LASTCHANGED
     date.strftime = %d.%m.%Y
     google = notranslate
-	og:locale = en_EN 
+	og:locale = de_DE 
 	og:locale.attribute = property 
     og:site_name = {$siteName}
 	apple-mobile-web-app-title = {$siteName}
 	application-name = {$siteName}
   msapplication-tooltip = {$siteName}
-	og:locale:alternate { 
-		attribute = property 
-		value.1 = ru_RU
-}
 }
 
 page.headerData.40 = COA

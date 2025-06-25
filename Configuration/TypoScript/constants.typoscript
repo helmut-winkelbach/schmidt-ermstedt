@@ -108,7 +108,7 @@ lib.contentElement.settings.responsiveimages.contentelements {
 }
 
 #### DEPENDENCIES ####
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'>
 
 resDir = EXT:schmidt_ermstedt
 

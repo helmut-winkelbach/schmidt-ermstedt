@@ -2,7 +2,7 @@
 renderingOptions:
   submitButtonLabel: Absenden
 identifier: AnmeldeformularGeraeteeinsendung
-label: Anmeldeformular Geräteeinsendung
+label: 'Anmeldeformular Geräteeinsendung'
 type: Form
 prototypeName: standard
 finishers:
@@ -22,6 +22,7 @@ finishers:
       replyToRecipients:
         '{email}': ''
     identifier: EmailToReceiver
+    defaultValue: ''
   -
     options:
       subject: 'Ihr Anmeldeformular zur Geräteeinsendung'
@@ -36,8 +37,9 @@ finishers:
         '{email}': '{name}'
       addHtmlPart: true
       replyToRecipients:
-        kontakt@schmidt-ermstedt.de: 'kontakt'
+        kontakt@schmidt-ermstedt.de: kontakt
     identifier: EmailToSender
+    defaultValue: ''
   -
     options:
       pageUid: '62'
@@ -60,6 +62,19 @@ renderables:
         properties:
           fluidAdditionalAttributes:
             required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie Ihren Namen und den Namen Ihrer Firma ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie Ihren Namen und den Namen Ihrer Firma ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie Ihren Namen und den Namen Ihrer Firma ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie Ihren Namen und den Namen Ihrer Firma ein.'
         validators:
           -
             identifier: NotEmpty
@@ -72,6 +87,19 @@ renderables:
           elementDescription: ''
           fluidAdditionalAttributes:
             required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie Ihre Anschrift ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie Ihre Anschrift ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie Ihre Anschrift ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie Ihre Anschrift ein.'
         validators:
           -
             identifier: NotEmpty
@@ -83,6 +111,19 @@ renderables:
         properties:
           fluidAdditionalAttributes:
             required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
         validators:
           -
             identifier: NotEmpty
@@ -94,6 +135,19 @@ renderables:
         properties:
           fluidAdditionalAttributes:
             required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
         validators:
           -
             identifier: NotEmpty
@@ -105,6 +159,22 @@ renderables:
         properties:
           fluidAdditionalAttributes:
             required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+            -
+              code: 1221559976
+              message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
         validators:
           -
             identifier: NotEmpty
@@ -115,6 +185,30 @@ renderables:
         type: Text
         identifier: text-4
         label: 'Direkte Rückrufnummer'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie Ihre Telefonnummer ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie Ihre Telefonnummer ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie Ihre Telefonnummer ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie Ihre Telefonnummer ein.'
+            -
+              code: 1221560494
+              message: 'Bitte tragen Sie Ihre Telefonnummer ein.'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: Integer
       -
         defaultValue: ''
         type: Text

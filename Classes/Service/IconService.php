@@ -21,7 +21,7 @@ class IconService
     public function getIconSetItems(array &$configuration): void
     {
         $iconSets = [];
-        $iconSets[] = ['LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:option.none', ''];
+        $iconSets[] = ['LLL:EXT:schmidt_ermstedt/Resources/Private/Language/Backend.xlf:option.none', ''];
 
         $iconProviders = $this->getIconProviders();
         foreach ($iconProviders as $iconProvider) {
@@ -38,9 +38,9 @@ class IconService
     {
         $iconItems = [];
         $iconItems[] = [
-            'LLL:EXT:winkelbach_distribution/Resources/Private/Language/Backend.xlf:option.none',
+            'LLL:EXT:schmidt_ermstedt/Resources/Private/Language/Backend.xlf:option.none',
             0,
-            'EXT:winkelbach_distribution/Resources/Public/Images/Icons/none.svg',
+            'EXT:schmidt_ermstedt/Resources/Public/Images/Icons/none.svg',
         ];
 
         $iconSetField = $configuration['config']['itemsProcConfig']['iconSetField'] ?? 'icon_set';
