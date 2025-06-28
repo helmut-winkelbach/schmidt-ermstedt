@@ -1,0 +1,94 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:form.validationResults for="{element.rootForm.identifier}.{element.identifier}">
+    <div class="form-group{f:if(condition: '{validationResults.errors.0}', then: ' has-error')}">
+        <f:if condition="{doNotShowLabel} != 1">
+            <label class="form-label" for="{element.uniqueIdentifier}">{formvh:translateElementProperty(element: element, property: 'label')}<f:if condition="{element.required}"><f:render partial="Field/Required" /></f:if></label>
+        </f:if>
+        <div class="{element.properties.containerClassAttribute}">
+            <f:format.raw>
+                {elementContent}
+                <f:if condition="{validationResults.flattenedErrors}">
+                    <div class="error form-text" role="alert">
+                        <f:for each="{validationResults.errors}" as="error">
+                            <f:format.htmlspecialchars>{formvh:translateElementError(element: element, error: error)}</f:format.htmlspecialchars>
+                            <br />
+                        </f:for>
+                    </div>
+                </f:if>
+            </f:format.raw>
+            <f:if condition="{element.properties.elementDescription}">
+                <div class="form-text">{formvh:translateElementProperty(element: element, property: 'elementDescription')}</div>
+            </f:if>
+        </div>
+    </div>
+<f:variable name="validitStates" value="{
+    'patternMismatch': {0: 1221565130},
+    'tooLong': {0: 1238108069},
+    'tooShort': {0: 1238108068},
+    'rangeOverflow': {0: 1221561046},
+    'rangeUnderflow': {0: 1221561046},
+    'typeMismatch': {0: 1221559976, 1: 1269883975, 2: 1221551320, 3: 1221560494, 4: 1221560288, 5: 1221563685, 6: 1221565786},
+    'valueMissing': {0: 1221560718},
+}" />
+<f:comment>
+patternMismatch (RegularExpression): 1221565130: The given subject did not match the pattern.
+tooLong: 1238108069: The length of the given string exceeded %s characters.
+tooShort: 1238108068: The length of the given string is less than %s characters.
+rangeOverflow: 1221561046: The given subject was not in the valid range (%s - %s).
+rangeUnderflow: 1221561046: The given subject was not in the valid range (%s - %s).
+typeMismatch:
+    - 1221551320: The given subject was not a valid alphanumeric string.
+    - 1269883975: The given value was not a valid string.
+    - 1221559976: The given subject was not a valid email address.
+    - 1221560494: The given subject was not a valid integer.
+    - 1221560288: The given subject was not a valid float.
+    - 1221563685: The given subject was not a valid number.
+    - 1221565786: The given subject was not a valid text (e.g. contained XML tags).
+valueMissing: 1221560718: The given subject was empty (string).
+</f:comment>
+<f:if condition="{element.properties.validationErrorMessages}">
+    <f:for each="{element.properties.validationErrorMessages}" as="validationErrorMessage">
+        <f:for each="{validitStates}" key="validitState" as="codes">
+            <f:for each="{codes}" as="code">
+                <f:if condition="{validationErrorMessage.code} == {code}">
+                    <f:variable name="setCustomMessage" value="1" />
+                </f:if>
+            </f:for>
+        </f:for>
+    </f:for>
+</f:if>
+<f:if condition="{setCustomMessage}">
+    <f:asset.script identifier="{element.uniqueIdentifier}">
+const field{element.index} = document.getElementById('{element.uniqueIdentifier}');
+['inout', 'focus', 'mouseenter'].forEach(function(eventString) <f:format.raw value="{"/>
+    field{element.index}.addEventListener(eventString, function(event) <f:format.raw value="{"/>
+        <f:for each="{element.properties.validationErrorMessages}" as="validationErrorMessage">
+            <f:for each="{validitStates}" key="validityState" as="codes">
+                <f:for each="{codes}" as="code">
+                    <f:if condition="{validationErrorMessage.code} == {code}">
+                        <f:if condition="{setElse}">else </f:if>if (event.target.validity.{validityState}) <f:format.raw value="{"/>
+                            event.target.setCustomValidity("{validationErrorMessage.message}");
+                            event.target.setAttribute('title', "{validationErrorMessage.message}");
+                        <f:format.raw value="}"/>
+                        <f:variable name="setElse" value="1" />
+                    </f:if>
+                </f:for>
+            </f:for>
+        </f:for>
+        else <f:format.raw value="{"/>
+            event.target.setCustomValidity('');
+            event.target.removeAttribute('title');
+        <f:format.raw value="}"/>
+        if (eventString !== 'mouseenter') <f:format.raw value="{"/>
+            event.target.reportValidity();
+        <f:format.raw value="}"/>
+    <f:format.raw value="}"/>);
+<f:format.raw value="}"/>);
+    </f:asset.script>
+</f:if>
+
+</f:form.validationResults>
+</html>
+
+
+

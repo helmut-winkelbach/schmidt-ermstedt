@@ -1195,7 +1195,7 @@ ul#main-menu{width:auto}
 .nav-brand{float:left;margin:0}
 .nav-brand a{display:block;padding:11px 11px 11px 0;color:#555;font-size:20px;font-weight:400;line-height:17px;text-decoration:none}
 #main-menu{clear:both;border:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
-ul#main-menu{position:fixed;list-style:none;width:75vw;display:flex;flex-flow:row wrap;justify-content:center;margin:30px 3px 50px 250px;padding:7px 0;background-color:rgba(190,200,220,.9);border:1px solid transparent;border-radius:.4rem}
+ul#main-menu{position:fixed;list-style:none;width:80vw;display:flex;flex-flow:row wrap;justify-content:center;margin:30px 3px 50px 240px;padding:7px 0;background-color:rgba(190,200,220,.9);border:1px solid transparent;border-radius:.4rem}
 
 .main-menu-btn{display:inline-block;position:fixed;top:30px;right:3%;z-index:999;background-color:#003766;width:70px;height:70px;margin-bottom:10px;text-align:center;white-space:nowrap;overflow:hidden;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);border:1px solid transparent;border-radius:.2rem}
 .main-menu-btn-icon,.main-menu-btn-icon:before,.main-menu-btn-icon:after{position:absolute;top:40%;left:8px;height:5px;width:52px;background:#fff;-webkit-transition:all .25s;transition:all .25s}
@@ -1207,7 +1207,7 @@ ul#main-menu{position:fixed;list-style:none;width:75vw;display:flex;flex-flow:ro
 #main-menu-state{position:absolute;width:1px;height:1px;margin:-1px;border:0;padding:0;overflow:hidden;clip:rect(1px,1px,1px,1px)}
 
 @media screen and (min-width:1340px){
-ul#main-menu{width:65vw;margin-left:350px}
+ul#main-menu{width:70vw;margin-left:330px}
 }
 @media screen and (max-width:1224px){
 ul#main-menu{position:absolute;right:1em}
@@ -1967,3 +1967,6 @@ body.page-40 h1{margin:0;font-size: 140%;padding:0}
 
 body.page-1 #c5{font-size:17px} 
 body.page-1 h4{margin:0;font-size: 140%;padding:0} 
+
+.error form-text{display:block;margin-top:0rem}
+[role="alert"] {display:block;text-align:center;background-color: #f8d7da;color:#721c24;border:1px solid #f5c6cb;padding:10px;border-radius:5px;font-weight:bold;width:auto}

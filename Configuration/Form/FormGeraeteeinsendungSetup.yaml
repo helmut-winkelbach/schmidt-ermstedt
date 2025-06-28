@@ -1,0 +1,15 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+        allowedExtensionPaths:
+          10: EXT:schmidt_ermstedt/Resources/Private/Forms/
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                partialRootPaths:
+                  20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Partials/AnmeldeformularzurGeraeteeinsendung/'

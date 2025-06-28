@@ -20,7 +20,7 @@ finishers:
         kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
-        '{email}': ''
+        '{email-1}': ''
     identifier: EmailToReceiver
     defaultValue: ''
   -
@@ -34,7 +34,7 @@ finishers:
       translation:
         language: default
       recipients:
-        '{email}': '{name}'
+        '{email-1}': '{name}'
       addHtmlPart: true
       replyToRecipients:
         kontakt@schmidt-ermstedt.de: kontakt
@@ -153,9 +153,14 @@ renderables:
             identifier: NotEmpty
       -
         defaultValue: ''
-        identifier: email
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+        type: Email
+        identifier: email-1
         label: E-Mail
-        type: Text
         properties:
           fluidAdditionalAttributes:
             required: required
@@ -174,12 +179,7 @@ renderables:
               message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
             -
               code: 1221559976
-              message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
-        validators:
-          -
-            identifier: NotEmpty
-          -
-            identifier: EmailAddress
+              message: 'Die E-Mail-Adresse scheint ungültig zu sein.'
       -
         defaultValue: ''
         type: Text
@@ -201,14 +201,9 @@ renderables:
             -
               code: 1347992453
               message: 'Bitte tragen Sie Ihre Telefonnummer ein.'
-            -
-              code: 1221560494
-              message: 'Bitte tragen Sie Ihre Telefonnummer ein.'
         validators:
           -
             identifier: NotEmpty
-          -
-            identifier: Integer
       -
         defaultValue: ''
         type: Text
@@ -292,6 +287,15 @@ renderables:
         type: StaticText
         identifier: statictext-3
         label: 'Bitte senden Sie das ausgefüllte Anmeldeformular vor dem Versand der Geräte ein.'
+      -
+        properties:
+          saveToFileMount: '1:/user_upload/'
+          allowedMimeTypes:
+            - image/jpeg
+            - image/png
+        type: ImageUpload
+        identifier: imageupload-1
+        label: 'Bitte laden Sie bei Bedarf das Bild des Gerätes hoch'
       -
         type: Checkbox
         identifier: checkbox-5
