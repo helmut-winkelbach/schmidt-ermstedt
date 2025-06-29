@@ -17,7 +17,7 @@ finishers:
       translation:
         language: default
       recipients:
-        kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email-1}': ''
@@ -37,7 +37,7 @@ finishers:
         '{email-1}': '{name}'
       addHtmlPart: true
       replyToRecipients:
-        kontakt@schmidt-ermstedt.de: kontakt
+        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
     identifier: EmailToSender
     defaultValue: ''
   -
@@ -288,14 +288,24 @@ renderables:
         identifier: statictext-3
         label: 'Bitte senden Sie das ausgefüllte Anmeldeformular vor dem Versand der Geräte ein.'
       -
-        properties:
-          saveToFileMount: '1:/user_upload/'
-          allowedMimeTypes:
-            - image/jpeg
-            - image/png
-        type: ImageUpload
-        identifier: imageupload-1
-        label: 'Bitte laden Sie bei Bedarf das Bild des Gerätes hoch'
+        type: Fieldset
+        identifier: fieldset-1
+        label: ''
+        renderables:
+          -
+            properties:
+              saveToFileMount: '1:/user_upload/'
+              allowedMimeTypes:
+                - image/jpeg
+                - image/png
+            type: FileUpload
+            identifier: bild-1
+            label: 'Bitte laden Sie bei Bedarf das Bild des Gerätes hoch'
+          -
+            defaultValue: ''
+            type: Hidden
+            identifier: pagetitle
+            label: Leerzeile
       -
         type: Checkbox
         identifier: checkbox-5
@@ -303,6 +313,19 @@ renderables:
         properties:
           fluidAdditionalAttributes:
             required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Diese Option ist verpflichtend.'
+            -
+              code: 1221560718
+              message: 'Diese Option ist verpflichtend.'
+            -
+              code: 1347992400
+              message: 'Diese Option ist verpflichtend.'
+            -
+              code: 1347992453
+              message: 'Diese Option ist verpflichtend.'
         validators:
           -
             identifier: NotEmpty

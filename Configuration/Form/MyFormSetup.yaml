@@ -6,3 +6,10 @@ TYPO3:
         allowDeleteFromExtensionPaths: true
         allowedExtensionPaths:
           10: EXT:schmidt_ermstedt/Resources/Private/Forms/
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                partialRootPaths:
+                  20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Partials/'

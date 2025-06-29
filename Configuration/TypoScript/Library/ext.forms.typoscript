@@ -1,7 +1,2 @@
 plugin.tx_form.settings.yamlConfigurations.100 = {$resDir}/Configuration/Form/MyFormSetup.yaml
 module.tx_form.settings.yamlConfigurations.100 = {$resDir}/Configuration/Form/MyFormSetup.yaml
-
-[page["uid"] == 351]
-   plugin.tx_form.settings.yamlConfigurations.100 = {$resDir}/Configuration/Form/FormGeraeteeinsendungSetup.yaml
-   module.tx_form.settings.yamlConfigurations.100 = {$resDir}/Configuration/Form/FormGeraeteeinsendungSetup.yaml
-[end]

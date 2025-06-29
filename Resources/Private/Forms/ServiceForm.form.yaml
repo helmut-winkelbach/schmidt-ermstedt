@@ -17,7 +17,7 @@ finishers:
       translation:
         language: ''
       recipients:
-        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
@@ -36,7 +36,7 @@ finishers:
         '{email}': '{text-99}'
       addHtmlPart: true
       replyToRecipients:
-        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
+        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
     identifier: EmailToSender
   -
     options:
@@ -322,7 +322,7 @@ renderables:
                 - image/jpeg
                 - image/png
             type: FileUpload
-            identifier: birth-certificate
+            identifier: bild-1
             label: 'Bitte laden Sie Ihr Bild hoch'
           -
             defaultValue: ''
