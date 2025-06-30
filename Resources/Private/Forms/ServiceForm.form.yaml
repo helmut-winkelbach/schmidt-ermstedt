@@ -25,7 +25,7 @@ finishers:
     defaultValue: ''
   -
     options:
-      subject: 'Ihre Webseitenanfrage: {text-99}'
+      subject: 'Heiko und Mario Schmidt GbR: Ihre Webseitenanfrage: {text-99}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{firstname} {lastname}'
       attachUploads: true
@@ -52,7 +52,7 @@ renderables:
       nextButtonLabel: 'Nächster Schritt'
     type: Page
     identifier: page-1
-    label: Ersatzteilanfrage
+    label: ''
     renderables:
       -
         type: Fieldset
@@ -303,19 +303,19 @@ renderables:
             properties:
               fluidAdditionalAttributes:
                 required: required
-          validationErrorMessages:
-            -
-              code: 1221560910
-              message: 'Was wollen Sie uns noch mitteilen?'
-            -
-              code: 1221560718
-              message: 'Was wollen Sie uns noch mitteilen?'
-            -
-              code: 1347992400
-              message: 'Was wollen Sie uns noch mitteilen?'
-            -
-              code: 1347992453
-              message: 'Was wollen Sie uns noch mitteilen?'
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Was wollen Sie uns noch mitteilen?'
+                -
+                  code: 1221560718
+                  message: 'Was wollen Sie uns noch mitteilen?'
+                -
+                  code: 1347992400
+                  message: 'Was wollen Sie uns noch mitteilen?'
+                -
+                  code: 1347992453
+                  message: 'Was wollen Sie uns noch mitteilen?'
             validators:
               -
                 identifier: NotEmpty
@@ -364,26 +364,60 @@ renderables:
         label: Person
         renderables:
           -
+            properties:
+              options:
+                Mr: Herr
+                Mrs: Fräulein
+                Ms: Frau
+                Hello: Hallo
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Bitte wählen Sie die Anrede aus'
+                -
+                  code: 1221560718
+                  message: 'Bitte wählen Sie die Anrede aus'
+                -
+                  code: 1347992400
+                  message: 'Bitte wählen Sie die Anrede aus'
+                -
+                  code: 1347992453
+                  message: 'Bitte wählen Sie die Anrede aus'
+            type: SingleSelect
+            identifier: title
+            label: Titel
+            defaultValue: ''
+            validators:
+              -
+                identifier: NotEmpty
+          -
             defaultValue: ''
             type: Text
             identifier: firstname
-            label: Name
+            label: Vorname
+          -
+            defaultValue: ''
+            type: Text
+            identifier: lastname
+            label: Nachname
             properties:
               fluidAdditionalAttributes:
                 required: required
-          validationErrorMessages:
-            -
-              code: 1221560910
-              message: 'Bitte tragen Sie Ihren Namen ein.'
-            -
-              code: 1221560718
-              message: 'Bitte tragen Sie Ihren Namen ein.'
-            -
-              code: 1347992400
-              message: 'Bitte tragen Sie Ihren Namen ein.'
-            -
-              code: 1347992453
-              message: 'Bitte tragen Sie Ihren Namen ein.'
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Bitte tragen Sie Ihren Namen ein.'
+                -
+                  code: 1221560718
+                  message: 'Bitte tragen Sie Ihren Namen ein.'
+                -
+                  code: 1347992400
+                  message: 'Bitte tragen Sie Ihren Namen ein.'
+                -
+                  code: 1347992453
+                  message: 'Bitte tragen Sie Ihren Namen ein.'
             validators:
               -
                 identifier: NotEmpty
@@ -422,30 +456,6 @@ renderables:
             identifier: fieldset-contact
             label: 'Kontakt Information'
             renderables:
-      -
-        defaultValue: ''
-        type: Text
-        identifier: text-3
-        label: 'Ansprechpartner für technische Rückfragen'
-        properties:
-          fluidAdditionalAttributes:
-            required: required
-          validationErrorMessages:
-            -
-              code: 1221560910
-              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
-            -
-              code: 1221560718
-              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
-            -
-              code: 1347992400
-              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
-            -
-              code: 1347992453
-              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
-        validators:
-          -
-            identifier: NotEmpty
               -
                 defaultValue: ''
                 type: Text
