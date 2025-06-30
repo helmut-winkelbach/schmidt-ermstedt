@@ -2,13 +2,13 @@
 renderingOptions:
   submitButtonLabel: Absenden
 identifier: AnmeldeformularGeraeteeinsendung
-label: 'Anmeldeformular Geräteeinsendung'
+label: 'Anmeldeformular für die Einsendung von Geräten zur Wartung oder Instandsetzung.'
 type: Form
 prototypeName: standard
 finishers:
   -
     options:
-      subject: 'Anmeldeformular zur Geräteeinsendung'
+      subject: 'Anmeldeformular für die Einsendung von Geräten zur Wartung oder Instandsetzung.'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{name}'
       attachUploads: true
@@ -17,7 +17,7 @@ finishers:
       translation:
         language: default
       recipients:
-        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email-1}': ''
@@ -25,10 +25,10 @@ finishers:
     defaultValue: ''
   -
     options:
-      subject: 'Ihr Anmeldeformular zur Geräteeinsendung'
+      subject: 'Ihr Anmeldeformular für die Einsendung von Geräten zur Wartung oder Instandsetzung.'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{name}'
-      attachUploads: false
+      attachUploads: true
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/AnmeldeformularGeraeteeinsendung/Sender/'
       translation:
@@ -37,7 +37,7 @@ finishers:
         '{email-1}': '{name}'
       addHtmlPart: true
       replyToRecipients:
-        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
     identifier: EmailToSender
     defaultValue: ''
   -
@@ -51,7 +51,7 @@ renderables:
       previousButtonLabel: 'Vorheriger Schritt'
       nextButtonLabel: 'Nächster Schritt'
     identifier: page-1
-    label: 'Anmeldeformular für die Einsendung von Geräten'
+    label: 'für die Einsendung von Geräten zur Wartung oder Instandsetzung'
     type: Page
     renderables:
       -
@@ -114,16 +114,16 @@ renderables:
           validationErrorMessages:
             -
               code: 1221560910
-              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
+              message: 'Bitte tragen Sie Ihre Anschrift, Stadt und Postleitzahl ein.'
             -
               code: 1221560718
-              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
+              message: 'Bitte tragen Sie Ihre Anschrift, Stadt und Postleitzahl ein.'
             -
               code: 1347992400
-              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
+              message: 'Bitte tragen Sie Ihre Anschrift, Stadt und Postleitzahl ein.'
             -
               code: 1347992453
-              message: 'Bitte tragen Sie Ihre Anschrift, die Stadt und die Postleitzahl ein.'
+              message: 'Bitte tragen Sie Ihre Anschrift, Stadt und Postleitzahl ein.'
         validators:
           -
             identifier: NotEmpty
@@ -153,11 +153,6 @@ renderables:
             identifier: NotEmpty
       -
         defaultValue: ''
-        validators:
-          -
-            identifier: EmailAddress
-          -
-            identifier: NotEmpty
         type: Email
         identifier: email-1
         label: E-Mail
@@ -180,6 +175,11 @@ renderables:
             -
               code: 1221559976
               message: 'Die E-Mail-Adresse scheint ungültig zu sein.'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
       -
         defaultValue: ''
         type: Text

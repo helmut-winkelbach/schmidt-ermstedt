@@ -3,7 +3,7 @@ renderingOptions:
   submitButtonLabel: Absenden
 type: Form
 identifier: ServiceForm
-label: 'ServiceForm'
+label: ServiceForm
 prototypeName: standard
 finishers:
   -
@@ -15,29 +15,31 @@ finishers:
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Receiver/'
       translation:
-        language: ''
+        language: default
       recipients:
         facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
     identifier: EmailToReceiver
+    defaultValue: ''
   -
     options:
-      subject: 'Heiko und Mario Schmidt GbR: Ihre Webseitenanfrage: {text-99}'
+      subject: 'Ihre Webseitenanfrage: {text-99}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{firstname} {lastname}'
       attachUploads: true
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
       translation:
-        language: ''
+        language: default
       recipients:
         '{email}': '{text-99}'
       addHtmlPart: true
       replyToRecipients:
         facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
     identifier: EmailToSender
+    defaultValue: ''
   -
     options:
       pageUid: '62'
@@ -50,7 +52,7 @@ renderables:
       nextButtonLabel: 'Nächster Schritt'
     type: Page
     identifier: page-1
-    label: ''
+    label: Ersatzteilanfrage
     renderables:
       -
         type: Fieldset
@@ -61,7 +63,7 @@ renderables:
             properties:
               options:
                 'I need spare parts for': '- Ich benötige Ersatzteilunterlagen zu folgender Maschine'
-                'Please send me your price': '- Bitte senden Sie mir meine Einkaufspreise für folgende Ersatzteile'  
+                'Please send me your price': '- Bitte senden Sie mir meine Einkaufspreise für folgende Ersatzteile'
                 'I need an initial part': '- Ich benötige ein Ersatzteil zu folgender Maschine'
                 'Send me your brochure': '- Senden Sie mir bitte Ihre Broschüre zu folgender Maschine'
                 'I have questions about your product': '- Ich habe Fragen zu folgender Maschine'
@@ -71,7 +73,7 @@ renderables:
               fluidAdditionalAttributes:
                 required: required
             type: SingleSelect
-            identifier: 'text-99'
+            identifier: text-99
             label: Betreff
             validators:
               -
@@ -301,6 +303,19 @@ renderables:
             properties:
               fluidAdditionalAttributes:
                 required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Was wollen Sie uns noch mitteilen?'
+            -
+              code: 1221560718
+              message: 'Was wollen Sie uns noch mitteilen?'
+            -
+              code: 1347992400
+              message: 'Was wollen Sie uns noch mitteilen?'
+            -
+              code: 1347992453
+              message: 'Was wollen Sie uns noch mitteilen?'
             validators:
               -
                 identifier: NotEmpty
@@ -349,38 +364,26 @@ renderables:
         label: Person
         renderables:
           -
-            properties:
-              options:
-                Mr: Herr
-                Mrs: Fräulein
-                Ms: Frau
-              fluidAdditionalAttributes:
-                required: required
-            type: SingleSelect
-            identifier: title
-            label: Titel
-            validators:
-              -
-                identifier: NotEmpty
-          -
             defaultValue: ''
             type: Text
             identifier: firstname
-            label: Vorname
+            label: Name
             properties:
               fluidAdditionalAttributes:
                 required: required
-            validators:
-              -
-                identifier: NotEmpty
-          -
-            defaultValue: ''
-            type: Text
-            identifier: lastname
-            label: Nachname
-            properties:
-              fluidAdditionalAttributes:
-                required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie Ihren Namen ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie Ihren Namen ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie Ihren Namen ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie Ihren Namen ein.'
             validators:
               -
                 identifier: NotEmpty
@@ -419,6 +422,30 @@ renderables:
             identifier: fieldset-contact
             label: 'Kontakt Information'
             renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: 'Ansprechpartner für technische Rückfragen'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
+            -
+              code: 1221560718
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
+            -
+              code: 1347992400
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
+            -
+              code: 1347992453
+              message: 'Bitte tragen Sie den Ansprechpartner für technische Rückfragen ein.'
+        validators:
+          -
+            identifier: NotEmpty
               -
                 defaultValue: ''
                 type: Text
@@ -427,6 +454,22 @@ renderables:
                 properties:
                   fluidAdditionalAttributes:
                     required: required
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+                    -
+                      code: 1221560718
+                      message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+                    -
+                      code: 1347992400
+                      message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+                    -
+                      code: 1347992453
+                      message: 'Bitte tragen Sie Ihre E-Mail-Adresse ein.'
+                    -
+                      code: 1221559976
+                      message: 'Die E-Mail-Adresse scheint ungültig zu sein.'
                 validators:
                   -
                     identifier: EmailAddress
@@ -454,6 +497,19 @@ renderables:
         properties:
           fluidAdditionalAttributes:
             required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Diese Option ist verpflichtend.'
+            -
+              code: 1221560718
+              message: 'Diese Option ist verpflichtend.'
+            -
+              code: 1347992400
+              message: 'Diese Option ist verpflichtend.'
+            -
+              code: 1347992453
+              message: 'Diese Option ist verpflichtend.'
         validators:
           -
             identifier: NotEmpty
