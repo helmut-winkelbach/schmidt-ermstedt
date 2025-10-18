@@ -7,14 +7,6 @@
 -->
 <div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 	<n:excludeDisplayedNews newsItem="{newsItem}"/>
-	<!-- header -->
-	<div class="header">
-		<h3>
-			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-				<span itemprop="headline">{newsItem.title}</span>
-			</n:link>
-		</h3>
-	</div>
 
 	<f:if condition="{newsItem.mediaPreviews}">
 		<!-- media preview element -->
@@ -34,6 +26,15 @@
 					</f:alias>
 				</n:link>
 			</div>
+              	<!-- header -->
+	<div class="header">
+		<h3>
+			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+				<span itemprop="headline">{newsItem.title}</span>
+			</n:link>
+		</h3>
+	</div>
+
 		</f:then>
 		<f:else>
 			<f:if condition="{settings.displayDummyIfNoMedia}">
@@ -44,6 +45,7 @@
 						</n:link>
 					</span>
 				</div>
+
 			</f:if>
 		</f:else>
 	</f:if>
@@ -90,14 +92,6 @@
 					</f:for>
 				</span>
 			</f:if>
-
-			<!-- author -->
-			<f:if condition="{newsItem.author}">
-				<span class="news-list-author">
-					<f:translate key="author" arguments="{0:newsItem.author}"/>
-				</span>
-			</f:if>
-		</p>
 	</div>
 </div>
 </html>

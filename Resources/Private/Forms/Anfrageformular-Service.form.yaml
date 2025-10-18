@@ -2,13 +2,13 @@
 renderingOptions:
   submitButtonLabel: Absenden
 type: Form
-identifier: ExtendedContactFormExample
-label: Ersatzteilanfrage
+identifier: ExtendedContactFormExample2
+label: 'Anfrageformular Service'
 prototypeName: standard
 finishers:
   -
     options:
-      subject: 'Ersatzteilanfrage: {subject}'
+      subject: 'Anfrageformular Service: {subject}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{name}'
       attachUploads: true
@@ -17,7 +17,7 @@ finishers:
       translation:
         language: default
       recipients:
-        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
@@ -27,7 +27,7 @@ finishers:
     defaultValue: ''
   -
     options:
-      subject: 'Ihre Ersatzteilanfrage: {subject}'
+      subject: 'Ihre Anfrage an den Service: {subject}'
       senderAddress: anfrage@schmidtermstedt.de
       senderName: '{subject}'
       attachUploads: true
@@ -39,7 +39,7 @@ finishers:
         '{email}': '{subject}'
       addHtmlPart: true
       replyToRecipients:
-        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
+        kontakt@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
     identifier: EmailToSender
     defaultValue: ''
   -
@@ -58,15 +58,15 @@ renderables:
     renderables:
       -
         type: Fieldset
-        identifier: fieldset-communication
+        identifier: fieldset-service
         label: null
         renderables:
           -
             properties:
               options:
-                'Ich benötige Ersatzteile': '- Ich benötige Ersatzteilunterlagen zu folgender Maschine'
-                'Bitte senden Sie mir Preise': '- Bitte senden Sie mir meine Einkaufspreise für folgende Ersatzteile'
-                'Ich habe eine Frage': '- Ich habe Fragen zu folgender Maschine, Bitte rufen Sie mich zurück'
+                'Ich möchte meine Maschine zur Wartung bringen.': '- Ich möchte meine Maschine zur Wartung bringen.'
+                'Ich möchte meine Maschine zur Instandsetzung bringen.': '- Ich möchte meine Maschine zur Instandsetzung bringen.'
+                'Ich möchte meine Maschine zur Garantieprüfung bringen.': '- Ich möchte meine Maschine zur Garantieprüfung bringen.'
                 Anderes: '- Anderes (bitte unten schreiben)'
               prependOptionLabel: 'Bitte wählen Sie Ihr Thema aus'
               fluidAdditionalAttributes:
@@ -87,6 +87,7 @@ renderables:
             type: SingleSelect
             identifier: subject
             label: Betreff
+            defaultValue: ''
             validators:
               -
                 identifier: NotEmpty
@@ -182,38 +183,39 @@ renderables:
             validators:
               -
                 identifier: NotEmpty
-          -
-            type: Fieldset
-            identifier: fieldset-2
-            label: null
       -
-        properties:
-          minimumCopies: 0
-          maximumCopies: 10
-          showRemoveButton: true
-          copyButtonLabel: 'Ein weiteres Ersatzteil anfragen'
-          removeButtonLabel: 'Dieses Ersatzteil entfernen'
-        type: RepeatableContainer
-        identifier: repeatablecontainer-1
-        label: Ersatzteilanfrage
+        type: Fieldset
+        identifier: fieldset-communication
+        label: null
         renderables:
           -
-            type: GridRow
-            identifier: gridrow-1
-            label: Ersatzteilanfrage
-            renderables:
+            properties:
+              options:
+                'Ich möchte die Maschine während der Geschäftszeit Mo.-Fr. 10:00-16:00 Uhr selbst bringen.': '- Ich möchte die Maschine während der Geschäftszeit selbst bringen. Eine Direktannahme erfolgt nur während unserer Geschäftszeiten Mo.-Fr. 10:00-16:00 Uhr.'
+                'Ich möchte die Maschine gern in das 24/7 Lager bringen und bitte um Zusendung eines Zugangscodes.': '- Ich möchte die Maschine gern in das 24/7 Lager bringen und bitte um Zusendung eines Zugangscodes.'
+                'Ich möchte das Gerät gern einsenden.': '- Ich möchte das Gerät gern einsenden.'
+              prependOptionLabel: 'Bitte wählen Sie Ihre Anlieferart aus'
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Bitte wählen Sie Ihre Anlieferart aus'
+                -
+                  code: 1221560718
+                  message: 'Bitte wählen Sie Ihre Anlieferart aus'
+                -
+                  code: 1347992400
+                  message: 'Bitte wählen Sie Ihre Anlieferart aus'
+                -
+                  code: 1347992453
+                  message: 'Bitte wählen Sie Ihre Anlieferart aus'
+            type: SingleSelect
+            identifier: submission
+            label: Bitte wählen Sie Ihre Anlieferart aus
+            validators:
               -
-                defaultValue: ''
-                type: Text
-                identifier: text-11
-                label: 'Beschreibung:'
-                properties:
-                  fluidAdditionalAttributes:
-                    placeholder: 'Beschreibung:'
-                  gridColumnClassAutoConfiguration:
-                    viewPorts:
-                      md:
-                        numbersOfColumnsToUse: '12'
+                identifier: NotEmpty
   -
     renderingOptions:
       previousButtonLabel: 'Vorheriger Schritt'
@@ -264,9 +266,61 @@ renderables:
             label: Firma
           -
             type: Fieldset
-            identifier: fieldset-contact
-            label: 'Kontakt Information'
+            identifier: fieldset-address
+            label: Lieferadresse
             renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: address
+                label: Strasse
+                validators:
+                  -
+                    identifier: NotEmpty
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+                    -
+                      code: 1221560718
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+                    -
+                      code: 1347992400
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+                    -
+                      code: 1347992453
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+              -
+                defaultValue: ''
+                type: Text
+                identifier: zip
+                label: 'Postleitzahl / Ort'
+                validators:
+                  -
+                    identifier: NotEmpty
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+                    -
+                      code: 1221560718
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+                    -
+                      code: 1347992400
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+                    -
+                      code: 1347992453
+                      message: 'Bitte tragen Sie ihre Adresse ein.'
+              -
+                type: Fieldset
+                identifier: fieldset-contact
+                label: Kundendaten
               -
                 defaultValue: ''
                 type: Text

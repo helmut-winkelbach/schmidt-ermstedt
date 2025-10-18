@@ -10,14 +10,14 @@ finishers:
     options:
       subject: 'Ersatzteilanfrage: {text-99}'
       senderAddress: anfrage@schmidtermstedt.de
-      senderName: '{firstname} {lastname}'
+      senderName: '{name}'
       attachUploads: true
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Receiver/'
       translation:
         language: default
       recipients:
-        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
+        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR Landtechnik-Werksvertretung'
       addHtmlPart: true
       replyToRecipients:
         '{email}': ''
@@ -27,7 +27,7 @@ finishers:
     options:
       subject: 'Heiko und Mario Schmidt GbR: Ihre Webseitenanfrage: {text-99}'
       senderAddress: anfrage@schmidtermstedt.de
-      senderName: '{firstname} {lastname}'
+      senderName: '{name}'
       attachUploads: true
       templateRootPaths:
         20: 'EXT:schmidt_ermstedt/Resources/Private/Frontend/Templates/Finishers/Kontakt/Sender/'
@@ -37,7 +37,7 @@ finishers:
         '{email}': '{text-99}'
       addHtmlPart: true
       replyToRecipients:
-        facebook@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
+        lager@schmidt-ermstedt.de: 'Heiko und Mario Schmidt GbR'
     identifier: EmailToSender
     defaultValue: ''
   -
@@ -52,7 +52,7 @@ renderables:
       nextButtonLabel: 'Nächster Schritt'
     type: Page
     identifier: page-1
-    label: ''
+    label: ERSATZTEILANFRAGE
     renderables:
       -
         type: Fieldset
@@ -364,44 +364,10 @@ renderables:
         label: Person
         renderables:
           -
-            properties:
-              options:
-                Mr: Herr
-                Mrs: Fräulein
-                Ms: Frau
-                Hello: Hallo
-              fluidAdditionalAttributes:
-                required: required
-              validationErrorMessages:
-                -
-                  code: 1221560910
-                  message: 'Bitte wählen Sie die Anrede aus'
-                -
-                  code: 1221560718
-                  message: 'Bitte wählen Sie die Anrede aus'
-                -
-                  code: 1347992400
-                  message: 'Bitte wählen Sie die Anrede aus'
-                -
-                  code: 1347992453
-                  message: 'Bitte wählen Sie die Anrede aus'
-            type: SingleSelect
-            identifier: title
-            label: Titel
-            defaultValue: ''
-            validators:
-              -
-                identifier: NotEmpty
-          -
             defaultValue: ''
             type: Text
-            identifier: firstname
-            label: Vorname
-          -
-            defaultValue: ''
-            type: Text
-            identifier: lastname
-            label: Nachname
+            identifier: name
+            label: Name
             properties:
               fluidAdditionalAttributes:
                 required: required

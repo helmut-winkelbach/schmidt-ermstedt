@@ -22,7 +22,7 @@ plugin.tx_news {
 }
 	
 
-##[globalVar = TSFE:id = 5]
+##[traverse(page, "uid") == 5]
 config.recordLinks.tx_news {
   typolink {
     parameter = 5

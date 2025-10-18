@@ -1,13 +1,17 @@
 ## User
 
 setup.override.edit_wideDocument = 1
+
+options {
+clearCache.system = 1
+pageTree.showPageIdWithTitle = 1
+}
+
 setup.default.copyLevels = 4
 TCAdefaults.pages.hidden = 0
 TCAdefaults.tt_content.sys_language_uid = -1
 TCEMAIN.permissions.groupid = 1
 options {
-clearCache.system = 1
-pageTree.showPageIdWithTitle = 1
 pageTree.showNavTitle = 1
 pageTree.showDomainNameWithTitle = 1
 saveDocNew = 1

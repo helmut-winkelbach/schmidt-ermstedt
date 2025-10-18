@@ -92,7 +92,7 @@ page {
     includeJSFooterlibs {
 	5 = {$resDir}/Resources/Public/JavaScript/jquery-3.7.1.min.js
   10 = {$resDir}/Resources/Public/JavaScript/tether.min.js
-	10bm_image_gallery.async = 1
+	10.async = 1
 	10.disableCompression = 0
 	20 = {$resDir}/Resources/Public/JavaScript/bootstrap.min.js
 	20.async = 1

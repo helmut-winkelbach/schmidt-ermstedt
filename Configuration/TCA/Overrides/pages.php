@@ -1,4 +1,6 @@
 <?php
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3') or die('Access denied.');
 call_user_func(function()
 {
@@ -10,17 +12,16 @@ call_user_func(function()
     /**
      * Default PageTS for SchmidtErmstedt
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+
+    ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
-        'Configuration/TsConfig/Page/All.tsconfig',
-        'Schmidt-Ermstedt'
+        'Configuration/TsConfig/Timeline.tsconfig',
+        'schmidt_ermstedt :: Timeline'
     );
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+    ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
-    'Configuration/TsConfig/Timeline.tsconfig',
-    'EXT:schmidt_ermstedt :: Timeline',
-    'Configuration/TsConfig/Accordion.tsconfig',
-    'EXT:schmidt_ermstedt :: Accordion'
+        'Configuration/TsConfig/Accordion.tsconfig',
+        'schmidt_ermstedt :: Accordion'
     );
 });
